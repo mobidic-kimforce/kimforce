@@ -64,6 +64,36 @@ nav{
   box-shadow:0 0 16px rgba(79,110,247,.35)
 }
 
+/* ── REPORT SECTION ── */
+.report-section{padding:100px 48px;position:relative;z-index:1;background:linear-gradient(180deg,var(--bg2) 0%,var(--bg3) 100%)}
+.report-inner{max-width:960px;margin:0 auto}
+.report-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(251,191,36,.12);border:1px solid rgba(251,191,36,.3);color:var(--gold);padding:7px 18px;border-radius:20px;font-size:.75rem;font-weight:800;letter-spacing:2px;margin-bottom:24px;text-transform:uppercase}
+.report-title{font-size:clamp(1.7rem,3vw,2.6rem);font-weight:900;color:#fff;margin-bottom:16px;line-height:1.2}
+.report-sub{color:var(--muted);font-size:1rem;max-width:620px;margin-bottom:56px;line-height:1.7}
+.report-card{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;backdrop-filter:blur(12px);box-shadow:var(--glow)}
+.report-features{list-style:none}
+.report-features li{display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid var(--border2);color:var(--text);font-size:.93rem;line-height:1.5}
+.report-features li:last-child{border-bottom:none}
+.report-features li::before{content:'✓';color:var(--gold);font-weight:900;font-size:1rem;flex-shrink:0;margin-top:1px}
+.report-buy-box{background:rgba(251,191,36,.06);border:1px solid rgba(251,191,36,.25);border-radius:20px;padding:36px;text-align:center;position:sticky;top:90px}
+.report-price-label{font-size:.78rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+.report-price{font-size:3.2rem;font-weight:900;color:var(--gold);line-height:1;margin-bottom:6px}
+.report-price-note{font-size:.8rem;color:var(--muted);margin-bottom:28px}
+.report-btn{display:block;width:100%;background:linear-gradient(135deg,#fbbf24,#f59e0b);color:#000;font-weight:900;font-size:1rem;padding:18px 24px;border-radius:14px;text-decoration:none;letter-spacing:.5px;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 24px rgba(251,191,36,.35);border:none;cursor:pointer;font-family:inherit}
+.report-btn:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(251,191,36,.5)}
+.report-includes{margin-top:20px;font-size:.78rem;color:var(--muted);line-height:1.8}
+.report-includes span{display:block}
+.report-preview{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.report-preview-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px}
+.report-preview-year{font-size:.72rem;color:var(--primary);font-weight:800;letter-spacing:2px;margin-bottom:8px}
+.report-preview-kw{font-size:.95rem;font-weight:700;color:#fff;margin-bottom:6px}
+.report-preview-desc{font-size:.78rem;color:var(--muted);line-height:1.5}
+@media(max-width:760px){
+  .report-section{padding:70px 20px}
+  .report-card{grid-template-columns:1fr;gap:28px}
+  .report-preview{grid-template-columns:1fr}
+}
+
 /* ── HERO ── */
 .hero{
   min-height:100vh;padding:110px 48px 80px;
@@ -541,6 +571,7 @@ footer p{font-size:.82rem;color:var(--muted);line-height:1.8}
     <li><a href="#services" id="nav2">서비스</a></li>
     <li><a href="#markets" id="nav3">마켓</a></li>
     <li><a href="#contact" id="nav4">상담</a></li>
+    <li><a href="#report" id="nav5" style="color:var(--gold)">리포트</a></li>
   </ul>
   <div class="lang-btns">
     <button class="lang-btn active" onclick="setLang('ko')">KR</button>
@@ -998,6 +1029,60 @@ footer p{font-size:.82rem;color:var(--muted);line-height:1.8}
   </div>
 </section>
 
+<!-- ════ REPORT ════ -->
+<section class="report-section" id="report">
+  <div class="report-inner">
+    <div class="report-badge" id="report-badge">📊 PREMIUM REPORT</div>
+    <h2 class="report-title" id="report-title">한국 마케팅 트렌드 리포트<br>2015 – 2026</h2>
+    <p class="report-sub" id="report-sub">지난 11년간 한국 디지털 마케팅 시장의 진화를 분석한 심층 리포트. 실제 캠페인 수치, 플랫폼별 전환율, 연도별 ROI 기댓값까지 — 마케팅 예산 결정에 필요한 모든 데이터.</p>
+
+    <div class="report-card">
+      <!-- LEFT: FEATURES -->
+      <ul class="report-features" id="report-features">
+        <li id="rf1">연도별 마케팅 트렌드 타임라인 (2015–2026) — 플랫폼 변화·소비자 행동·광고 시장 규모 포함</li>
+        <li id="rf2">한국 검증 캠페인 성공 수치 — 동원참치 3,000만 뷰, COSRX 글로벌 바이럴, 아모레퍼시픽 매출 120% 등 실증 데이터</li>
+        <li id="rf3">온라인 마케팅 채널별 ROI 기댓값 — SEO·SNS·퍼포먼스·숏폼·라이브커머스별 ROAS 벤치마크</li>
+        <li id="rf4">2026 최신 마케팅 방법론 — AI 자동화, 제로클릭 최적화, 감정 기반 마케팅(Feelconomy)</li>
+        <li id="rf5">글로벌 에이전시와의 비용 구조 비교 — 왜 3%인가에 대한 데이터 기반 설명</li>
+        <li id="rf6">일본·중국·UAE·미국 시장별 K-마케팅 적용 가이드</li>
+      </ul>
+
+      <!-- RIGHT: BUY BOX -->
+      <div class="report-buy-box">
+        <div class="report-price-label" id="rp-label">ONE-TIME PURCHASE</div>
+        <div class="report-price">$50</div>
+        <div class="report-price-note" id="rp-note">USD · 즉시 다운로드 / 이메일 발송</div>
+        <a href="GUMROAD_LINK_HERE" class="report-btn" id="report-buy-btn" target="_blank">지금 구매하기 →</a>
+        <div class="report-includes" id="rp-includes">
+          <span>✉️ 구매 후 즉시 이메일로 발송</span>
+          <span>📄 PDF 형식 (한국어 / 영어)</span>
+          <span>🔒 100% 환불 보장 (3일 이내)</span>
+          <span>📊 2026년 최신 데이터 기준</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREVIEW CARDS -->
+    <div class="report-preview">
+      <div class="report-preview-card">
+        <div class="report-preview-year">2015 – 2018</div>
+        <div class="report-preview-kw" id="rpv1-kw">모바일 원년 & 인플루언서 태동</div>
+        <div class="report-preview-desc" id="rpv1-desc">SNS 광고 모바일 역전, 네이버 C-Rank 알고리즘, 인플루언서 마케팅 ROI 첫 데이터</div>
+      </div>
+      <div class="report-preview-card">
+        <div class="report-preview-year">2019 – 2022</div>
+        <div class="report-preview-kw" id="rpv2-kw">코로나 & 라이브커머스 폭발</div>
+        <div class="report-preview-desc" id="rpv2-desc">비대면 소비 혁명, 라이브커머스 400억→6조원, 숏폼 전성시대 수치 분석</div>
+      </div>
+      <div class="report-preview-card">
+        <div class="report-preview-year">2023 – 2026</div>
+        <div class="report-preview-kw" id="rpv3-kw">AI 마케팅 & 초개인화</div>
+        <div class="report-preview-desc" id="rpv3-desc">생성형 AI 크리에이티브, 제로클릭 시대 GEO 전략, 2026 트렌드 코리아 핵심 키워드</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ════ CTA ════ -->
 <section class="cta" id="contact">
   <h2 id="ctatitle"><span>무료 상담</span>을 받으세요</h2>
@@ -1081,7 +1166,7 @@ const T = {
     "hero-p":`경쟁사가 알아채기 전에 선점하세요.<br>광고 집행비의 <strong>3%</strong>만으로.`,
     btn1:"무료 상담 신청 →",btn2:"K-First 방법론 보기",
     fl1:"광고비 대비 수수료",fl2:"KR · JP · CN · UAE",fl3:"검증된 콘텐츠",
-    nav1:"전략",nav2:"서비스",nav3:"마켓",nav4:"상담",
+    nav1:"전략",nav2:"서비스",nav3:"마켓",nav4:"상담",nav5:"리포트",
     st1:"광고비 대비 수수료",st2:"한국 선행 검증",st3:"세계 시장 공략",st4:"언어 대응",
     "paradigm-headline":"새로운 마케팅 패러다임",
     "paradigm-sub":"한국에서 <span class='acc'>3개월의 검증기간</span>을 거친 뒤,<br>일본 · 중국 · 두바이 · 아메리카 — <span class='acc'>전 세계로 동시 확산</span>됩니다",
@@ -1146,7 +1231,23 @@ const T = {
     ctatitle:`<span>무료 상담</span>을 받으세요`,ctasub:"먼저 현재 마케팅에서 무엇이 문제인지 짚어드립니다. 비용 없이.",
     fi1:"회사명",fi2:"담당자",fi3:"EMAIL",fi4:"국가",
     fm0:"마케팅 방법",fi6:"월 광고예산 (각국의 화폐단위로 직접입력)",
-    submitbtn:"상담 신청하기 →"
+    submitbtn:"상담 신청하기 →",
+    "report-badge":"📊 프리미엄 리포트",
+    "report-title":"한국 마케팅 트렌드 리포트<br>2015 – 2026",
+    "report-sub":"지난 11년간 한국 디지털 마케팅 시장의 진화를 분석한 심층 리포트. 실제 캠페인 수치, 플랫폼별 전환율, 연도별 ROI 기댓값까지 — 마케팅 예산 결정에 필요한 모든 데이터.",
+    rf1:"연도별 마케팅 트렌드 타임라인 (2015–2026) — 플랫폼 변화·소비자 행동·광고 시장 규모 포함",
+    rf2:"한국 검증 캠페인 성공 수치 — 동원참치 3,000만 뷰, COSRX 글로벌 바이럴, 아모레퍼시픽 매출 120% 등 실증 데이터",
+    rf3:"온라인 마케팅 채널별 ROI 기댓값 — SEO·SNS·퍼포먼스·숏폼·라이브커머스별 ROAS 벤치마크",
+    rf4:"2026 최신 마케팅 방법론 — AI 자동화, 제로클릭 최적화, 감정 기반 마케팅",
+    rf5:"글로벌 에이전시와의 비용 구조 비교 — 왜 3%인가에 대한 데이터 기반 설명",
+    rf6:"일본·중국·UAE·미국 시장별 K-마케팅 적용 가이드",
+    "rp-label":"1회 구매",
+    "rp-note":"USD · 즉시 다운로드 / 이메일 발송",
+    "report-buy-btn":"지금 구매하기 →",
+    "rp-includes":"<span>✉️ 구매 후 즉시 이메일로 발송</span><span>📄 PDF 형식 (한국어 / 영어)</span><span>🔒 100% 환불 보장 (3일 이내)</span><span>📊 2026년 최신 데이터 기준</span>",
+    "rpv1-kw":"모바일 원년 & 인플루언서 태동","rpv1-desc":"SNS 광고 모바일 역전, 네이버 C-Rank 알고리즘, 인플루언서 마케팅 ROI 첫 데이터",
+    "rpv2-kw":"코로나 & 라이브커머스 폭발","rpv2-desc":"비대면 소비 혁명, 라이브커머스 400억→6조원, 숏폼 전성시대 수치 분석",
+    "rpv3-kw":"AI 마케팅 & 초개인화","rpv3-desc":"생성형 AI 크리에이티브, 제로클릭 시대 GEO 전략, 2026 트렌드 코리아 핵심 키워드"
   },
   en:{
     badge:"🇰🇷 K-FIRST MARKETING AGENCY",
@@ -1154,7 +1255,7 @@ const T = {
     "hero-p":`Get ahead before your competitors notice.<br><strong>Only 3%</strong> of your ad spend.`,
     btn1:"Get Free Consultation →",btn2:"See K-First Method",
     fl1:"Fee of ad spend",fl2:"KR · JP · CN · UAE",fl3:"Validated content",
-    nav1:"Strategy",nav2:"Services",nav3:"Markets",nav4:"Contact",
+    nav1:"Strategy",nav2:"Services",nav3:"Markets",nav4:"Contact",nav5:"Report",
     st1:"Fee of ad spend",st2:"Months ahead in Korea",st3:"Target markets",st4:"Languages",
     "nv-jp":"2-3 months later","nv-cn":"3-6 months later","nv-uae":"New market",
     vtitle:"What's Actually Going Viral in Korea Right Now",vsub:"These exact methods — deployed in your market. 3% of ad spend.",
@@ -1204,7 +1305,23 @@ const T = {
     ctatitle:`Get Your <span>Free Consultation</span>`,ctasub:"We'll diagnose your marketing blind spots. No cost, no commitment.",
     fi1:"Company",fi2:"Contact Name",fi3:"Email",fi4:"Country",
     fm0:"Marketing Method",fi6:"Monthly Ad Budget (in your currency)",
-    submitbtn:"Request Consultation →"
+    submitbtn:"Request Consultation →",
+    "report-badge":"📊 PREMIUM REPORT",
+    "report-title":"Korea Marketing Trend Report<br>2015 – 2026",
+    "report-sub":"An in-depth analysis of 11 years of Korean digital marketing evolution. Real campaign numbers, channel-by-channel conversion rates, and year-by-year ROI benchmarks — everything you need to make confident marketing budget decisions.",
+    rf1:"Year-by-year marketing trend timeline (2015–2026) — platform shifts, consumer behavior, ad market size",
+    rf2:"Verified Korean campaign numbers — Dongwon Tuna 30M views, COSRX global viral, Amorepacific +120% sales, and more",
+    rf3:"ROI benchmarks by channel — ROAS data for SEO, SNS, performance ads, short-form, and live commerce",
+    rf4:"2026 cutting-edge methodologies — AI automation, zero-click optimization, Feelconomy marketing",
+    rf5:"Cost structure comparison vs global agencies — the data behind why 3% works",
+    rf6:"K-marketing application guide for Japan, China, UAE, and the US markets",
+    "rp-label":"ONE-TIME PURCHASE",
+    "rp-note":"USD · Instant download / email delivery",
+    "report-buy-btn":"Buy Now →",
+    "rp-includes":"<span>✉️ Delivered to your email instantly</span><span>📄 PDF format (Korean / English)</span><span>🔒 100% refund guarantee within 3 days</span><span>📊 Based on 2026 latest data</span>",
+    "rpv1-kw":"Mobile Era & Influencer Emergence","rpv1-desc":"Mobile overtakes PC in ad spend, Naver C-Rank algorithm, first influencer marketing ROI data",
+    "rpv2-kw":"COVID & Live Commerce Explosion","rpv2-desc":"Contactless consumer revolution, live commerce ₩40B → ₩6T, short-form era data",
+    "rpv3-kw":"AI Marketing & Hyper-Personalization","rpv3-desc":"Generative AI creatives, GEO strategy for zero-click era, 2026 Trend Korea key keywords"
   },
   ja:{
     badge:"🇰🇷 K-FIRSTマーケティングエージェンシー",
@@ -1212,7 +1329,7 @@ const T = {
     "hero-p":`競合より先に市場を押さえてください。<br>広告費の<strong>たった3%</strong>で。`,
     btn1:"無料相談を受ける →",btn2:"K-Firstメソッドを見る",
     fl1:"広告費に対する手数料",fl2:"KR · JP · CN · UAE",fl3:"実証済みコンテンツ",
-    nav1:"戦略",nav2:"サービス",nav3:"市場",nav4:"相談",
+    nav1:"戦略",nav2:"サービス",nav3:"市場",nav4:"相談",nav5:"レポート",
     st1:"広告費に対する手数料",st2:"ヶ月先行して韓国で検証",st3:"ターゲット市場",st4:"対応言語",
     "nv-jp":"2〜3ヶ月後","nv-cn":"3〜6ヶ月後","nv-uae":"新規進出",
     vtitle:"今まさに韓国で爆発しているマーケティング",vsub:"これらの手法をあなたの市場に先に適用します。広告費の3%で。",
@@ -1234,117 +1351,4 @@ const T = {
     vc6h:"コミュニティファースト ローンチ",
     vc6p:"製品発売前にファンダムをまず構築。ウェイティングリスト→発売当日に口コミ爆発。広告なしで売り切れる公式。",
     vc6r:"📈 結果: 発売当日完売→待機者5,000人+",
-    stag1:"K-FIRST™ メソッド",stitle1:"韓国が実証したら、私たちが先に使う。",
-    ssub1:"韓国はアジアのマーケティングトレンドの震源地。日本には2〜3ヶ月、中国には3〜6ヶ月遅れで同じトレンドが届きます。",
-    pt1:"スキャン",pt2:"ローカライズ",pt3:"増幅",
-    ph1:"韓国バイラルをモニタリング",ph2:"現地文化に再解釈",ph3:"オーガニック→広告で増幅",
-    pp1:"毎週、韓国で爆発しているマーケティング手法を追跡します。ナノシーディング、チャレンジ、透明性マーケティングなど。",
-    pp2:"単なる翻訳ではありません。日本のTwitter/X感性に合わせて再解釈し、現地人が自然に反応できるようにします。",
-    pp3:"まずナノインフルエンサーシーディングでオーガニック反応を確認。実証済みコンテンツのみ広告費を投入。3%のみ。",
-    stag2:"サービス",stitle2:"3つの収益の柱",ssub2:"代理店業務から訪韓観光客インフラまで。",
-    sv1h:"韓国ブランド → 日本市場進出",sv1p:"K-Beauty・K-Fashion・K-Foodブランドの日本市場マーケティング代行。韓国で検証済みの手法を現地化して適用。",
-    sv2h:"訪韓観光客インフラ",sv2p:"日本に韓国旅行専門メディアチャンネルを構築。整形外科・皮膚科・グルメへ日本人観光客を自動誘導。",
-    sv3h:"日本現地企業パフォーマンス",sv3p:"日本現地企業の広告代行。一般代理店20〜30%に対し、KIMFORCEは3%。",
-    stag3:"ターゲット市場",stitle3:"私たちの市場",ssub3:"韓国発のトレンドが流れる場所。",
-    jptitle:"日本市場",jpdesc:"世界最大のTwitter/X市場。K-Beauty・K-Foodへの関心が最高潮。現地代理店手数料20〜30%。",
-    jp1:"📱 Twitter/X バイラル — 韓国コミュニティ手法を移植",jp2:"💄 ナノインフルエンサー大量シーディング",jp3:"✈️ ソウル美容・グルメツアーチャンネル構築",jp4:"💬 LINEマーケティング + CRM自動化",
-    zhtitle:"中国市場",zhdesc:"小红书はK-Beautyの聖地。種草文化は韓国と同じ。医療観光の需要が急増。",
-    zh1:"📕 小红书 KOCシーディング×200名",zh2:"🎵 抖音チャレンジフォーマット",zh3:"🏥 韓国整形・皮膚科への中国人患者誘致",zh4:"🛍️ WeChat CRM + ライブコマース連携",
-    uaetitle:"中東・UAE市場",uaedesc:"ドバイの富裕層消費者はアジアトレンドに敏感。K-Beauty・K-Cultureが急速に台頭。世界最高のSNS浸透率。",
-    uae1:"📱 Instagram・TikTokナノインフルエンサーシーディング",uae2:"🏬 ドバイモールK-Beautyポップアップ+インフルエンサー連携",
-    uae3:"💎 韓国プレミアムビューティー・医療ポジショニング",uae4:"🌐 アラビア語ローカライズコンテンツ + CRM自動化",
-    stag4:"なぜKIMFORCEか",stitle4:"なぜ3%なのか",ssub4:"AI自動化と韓国実証済み手法でコスト構造を革新しました。",
-    ch1:"✅ KIMFORCE",ch2:"❌ 一般代理店",
-    cr1a:"手数料率",cr2a:"月1,000万ウォン出稿時",cr3a:"手法",cr4a:"契約",cr5a:"言語対応",
-    cr1b:"手数料率",cr2b:"月1,000万ウォン出稿時",cr3b:"手法",cr4b:"契約",cr5b:"言語対応",
-    cr3av:"K-First™ 実証済み",cr4av:"月単位",cr3bv:"一般的アプローチ",cr4bv:"3〜6ヶ月縛り",cr5bv:"単一言語",
-    dashtitle:"リアルタイム成果ダッシュボード",
-    ctatitle:`<span>無料相談</span>を受ける`,ctasub:"現在のマーケティングの課題を無料で診断します。費用はかかりません。",
-    fi1:"会社名",fi2:"担当者名",fi3:"メールアドレス",fi4:"国",
-    fm0:"マーケティング手法",fi6:"月間広告予算（通貨単位を含めて入力）",
-    submitbtn:"相談を申し込む →"
-  },
-  zh:{
-    badge:"🇰🇷 K-FIRST营销代理机构",
-    h1:`韩国<span class="gold">验证的</span><br>病毒式营销方法<br><span class="hl">应用于您的市场</span>`,
-    "hero-p":`在竞争对手察觉之前抢先占领市场。<br><strong>仅需广告费用的3%</strong>。`,
-    btn1:"立即获取免费咨询 →",btn2:"了解K-First方法论",
-    fl1:"广告费用占比",fl2:"KR · JP · CN · UAE",fl3:"已验证内容",
-    nav1:"战略",nav2:"服务",nav3:"市场",nav4:"咨询",
-    st1:"广告费用占比",st2:"个月提前在韩国验证",st3:"目标市场",st4:"语言支持",
-    "nv-jp":"2-3个月后","nv-cn":"3-6个月后","nv-uae":"新兴市场",
-    vtitle:"现在韩国正在爆发的营销方法",vsub:"将这些方法率先应用于您的市场。广告费的3%。",
-    vc1h:"纳米网红100人同时种草",
-    vc1p:"VT Cosmetics RIDDLESHOT — 向粉丝1千至1万的网红100人同时寄送样品。24小时内同步发布→算法检测为急速上升趋势。全国断货。",
-    vc1r:"📈 结果：全国断货 → 年销售额170亿",
-    vc2h:"普通人变身前后对比",
-    vc2p:"真实顾客而非明星的变身故事。看起来不像广告，因此无抵触地被分享。皮肤科、整形、美妆品牌反响爆炸。",
-    vc2r:"📈 结果：比付费广告有机触达高5-10倍",
-    vc3h:"成分·原料透明化营销",
-    vc3p:"Anua、Beauty of Joseon——\"没什么可隐瞒\"的定位。通过公开成分内容建立信任，2030消费者反应爆炸。现已成为K-Beauty标准。",
-    vc3r:"📈 结果：品牌复购率30-50%",
-    vc4h:"挑战赛自然流量→付费广告放大",
-    vc4p:"先用挑战赛形式验证自然传播效果。只对反应好的视频投入广告费。已验证内容的ROAS高3-5倍。",
-    vc4r:"📈 结果：同等预算ROAS高3-5倍",
-    vc5h:"快闪店 + SNS病毒传播循环",
-    vc5p:"设计引发打卡的空间→访客自发上传→算法急速上升→新闻报道。在首尔圣水洞、弘大验证的公式。线下触发线上病毒传播。",
-    vc5r:"📈 结果：媒体曝光 + 粉丝增长10倍",
-    vc6h:"社区优先启动",
-    vc6p:"产品发布前先建立粉丝群。维护候补名单→上市当天口碑爆炸。不投广告也能售罄的公式。",
-    vc6r:"📈 结果：上市当天售罄→候补5000人+",
-    stag1:"K-FIRST™ 方法论",stitle1:"韩国验证，我们率先使用。",
-    ssub1:"韩国是亚洲营销趋势的震源地。日本滞后2-3个月，中国滞后3-6个月迎来同样趋势。我们利用这个时间差。",
-    pt1:"扫描",pt2:"本地化",pt3:"放大",
-    ph1:"监测韩国病毒式趋势",ph2:"根据当地文化再诠释",ph3:"自然流量验证后付费放大",
-    pp1:"每周追踪在韩国爆发的营销手法。纳米种草、挑战赛、透明化营销等。",
-    pp2:"不仅仅是翻译。根据中国小红书文化重新诠释，让当地用户自然产生共鸣。",
-    pp3:"先用纳米KOC种草验证自然反应，再对已验证内容投入广告费放大。只需3%。",
-    stag2:"服务",stitle2:"三大收益方向",ssub2:"从代理业务到入境旅游基础设施。",
-    sv1h:"韩国品牌 → 进军日本/中国",sv1p:"韩国美妆、时尚、食品品牌的日本和中国市场营销代理。将韩国验证的手法本地化后直接应用。",
-    sv2h:"入境旅游流量基础设施",sv2p:"在中国构建韩国旅游专属媒体渠道。将中国游客自动导流至韩国整形外科、皮肤科、餐厅。",
-    sv3h:"本地企业效果营销",sv3p:"中国本地企业广告代理。本地代理机构收取20-30%，KIMFORCE只收3%。",
-    stag3:"目标市场",stitle3:"我们的市场",ssub3:"韩国创造的趋势流向之处。",
-    jptitle:"日本市场",jpdesc:"全球最大Twitter/X市场。K-Beauty和K-Food关注度达历史峰值。当地代理机构费率20-30%。",
-    jp1:"📱 Twitter/X病毒传播 — 移植韩国社区玩法",jp2:"💄 纳米网红大规模种草",jp3:"✈️ 首尔美容美食旅游频道构建",jp4:"💬 LINE营销 + CRM自动化",
-    zhtitle:"中国市场",zhdesc:"小红书是K-Beauty的圣地。种草文化与韩国相同。医疗旅游需求爆炸式增长。",
-    zh1:"📕 小红书KOC种草×200人",zh2:"🎵 抖音挑战赛格式",zh3:"🏥 将中国患者引导至韩国整形、皮肤科",zh4:"🛍️ 微信CRM + 直播带货联动",
-    uaetitle:"中东·阿联酋市场",uaedesc:"迪拜高收入消费者对亚洲趋势极为敏感。K-Beauty和K-Culture快速崛起。全球SNS普及率最高的新兴市场。",
-    uae1:"📱 Instagram·TikTok纳米网红种草",uae2:"🏬 迪拜购物中心K-Beauty快闪+网红整合",
-    uae3:"💎 韩国高端美妆·医疗定位策略",uae4:"🌐 阿拉伯语本土化内容 + CRM自动化",
-    stag4:"为什么选KIMFORCE",stitle4:"为什么只收3%？",ssub4:"AI自动化 + 韩国验证方法论彻底革新成本结构。",
-    ch1:"✅ KIMFORCE",ch2:"❌ 普通代理机构",
-    cr1a:"收费比例",cr2a:"月投放1000万韩元",cr3a:"方法论",cr4a:"合同",cr5a:"语言支持",
-    cr1b:"收费比例",cr2b:"月投放1000万韩元",cr3b:"方法论",cr4b:"合同",cr5b:"语言支持",
-    cr3av:"K-First™ 已验证",cr4av:"按月",cr3bv:"通用方法",cr4bv:"3-6个月锁定",cr5bv:"单一语言",
-    dashtitle:"实时效果数据看板",
-    ctatitle:`获取<span>免费咨询</span>`,ctasub:"我们将免费诊断您当前营销的问题所在。",
-    fi1:"公司名称",fi2:"负责人姓名",fi3:"电子邮件",fi4:"国家",
-    fm0:"营销方式",fi6:"月广告预算（请以当地货币单位填写）",
-    submitbtn:"申请咨询 →"
-  }
-};
-
-function setLang(l){
-  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
-  document.querySelector(`.lang-btn[onclick="setLang('${l}')"]`).classList.add('active');
-
-  const d=T[l];
-  for(const k in d){
-    const el=document.getElementById(k);
-    if(!el)continue;
-    if(el.tagName==='INPUT'||el.tagName==='TEXTAREA')el.placeholder=d[k];
-    else if(el.tagName==='OPTION')el.textContent=d[k];
-    else el.innerHTML=d[k];
-  }
-
-  const imgs=IMGS[l];
-  for(const id in imgs){
-    const el=document.getElementById(id);
-    if(el&&el.tagName==='IMG')el.src=imgs[id];
-  }
-
-  document.documentElement.lang=l;
-}
-</script>
-</body>
-</html>
+    stag1:"K-FIRST™ メソッド",stitle1:"韓国が実証したら、私た
