@@ -1241,7 +1241,12 @@ footer p{font-size:.82rem;color:var(--muted);line-height:1.8}
         <div class="report-price-label" id="rp-label">ONE-TIME PURCHASE</div>
         <div class="report-price">$50</div>
         <div class="report-price-note" id="rp-note">USD · 즉시 다운로드 / 이메일 발송</div>
-        
+
+        <!-- Gumroad 결제 버튼 -->
+        <a class="report-btn" href="https://modiking.gumroad.com/l/fesbe" target="_blank" rel="noopener" id="rp-btn">
+          💳 카드 결제로 구매하기 →
+        </a>
+
         <div class="crypto-pay" id="crypto-section">
           <div class="crypto-divider"><span id="crypto-or">또는</span></div>
           <div class="crypto-header" id="crypto-btn-text">💎 USDT(TRC-20) 결제</div>
@@ -1255,7 +1260,7 @@ footer p{font-size:.82rem;color:var(--muted);line-height:1.8}
         <div class="report-includes" id="rp-includes">
           <span>✉️ 구매 후 즉시 이메일로 발송</span>
           <span>📄 PDF 형식 (한국어 / 영어)</span>
-          <span>🔒 100% 환불 보장 (3일 이내)</span>
+          <span id="rp-refund">⚠️ 문서 수령 후 환불 불가</span>
           <span>📊 2026년 최신 데이터 기준</span>
         </div>
       </div>
@@ -1449,7 +1454,7 @@ const T = {
     "report-sub":"지난 11년간 한국 디지털 마케팅 시장의 진화를 분석한 심층 리포트. 실제 캠페인 수치, 플랫폼별 전환율, 연도별 ROI 기댓값까지.",
     rf1:"연도별 마케팅 트렌드 타임라인 (2015–2026)",rf2:"한국 검증 캠페인 성공 수치",rf3:"온라인 마케팅 채널별 ROI 기댓값",rf4:"2026 최신 마케팅 방법론",rf5:"글로벌 에이전시와의 비용 구조 비교",rf6:"일본·중국·UAE·미국 시장별 K-마케팅 적용 가이드",
     "rp-label":"1회 구매","rp-note":"USD · 즉시 다운로드 / 이메일 발송","report-buy-btn":"지금 구매하기 →",
-    "rp-includes":"<span>✉️ 구매 후 즉시 이메일로 발송</span><span>📄 PDF 형식 (한국어 / 영어)</span><span>🔒 100% 환불 보장 (3일 이내)</span><span>📊 2026년 최신 데이터 기준</span>",
+    "rp-includes":"<span>✉️ 구매 후 즉시 이메일로 발송</span><span>📄 PDF 형식 (한국어 / 영어)</span><span>⚠️ 문서 수령 후 환불 불가</span><span>📊 2026년 최신 데이터 기준</span>",
     "rpv1-kw":"모바일 원년 & 인플루언서 태동","rpv1-desc":"SNS 광고 모바일 역전, 네이버 C-Rank 알고리즘, 인플루언서 마케팅 ROI 첫 데이터",
     "rpv2-kw":"코로나 & 라이브커머스 폭발","rpv2-desc":"비대면 소비 혁명, 라이브커머스 400억→6조원, 숏폼 전성시대 수치 분석",
     "rpv3-kw":"AI 마케팅 & 초개인화","rpv3-desc":"생성형 AI 크리에이티브, 제로클릭 시대 GEO 전략, 2026 트렌드 코리아 핵심 키워드"
@@ -1532,8 +1537,8 @@ const T = {
     "report-badge":"📊 PREMIUM REPORT","report-title":"Korea Marketing Trend Report<br>2015 – 2026",
     "report-sub":"An in-depth analysis of 11 years of Korean digital marketing evolution. Real campaign numbers, channel-by-channel conversion rates, year-by-year ROI benchmarks.",
     rf1:"Year-by-year marketing trend timeline (2015–2026)",rf2:"Verified Korean campaign numbers — COSRX global viral, Amorepacific +120% sales",rf3:"ROI benchmarks by channel — ROAS data for SEO, SNS, performance, short-form",rf4:"2026 cutting-edge methodologies — AI automation, zero-click optimization",rf5:"Cost structure comparison vs global agencies — the data behind why 3% works",rf6:"K-marketing application guide for Japan, China, UAE, and the US markets",
-    "rp-label":"ONE-TIME PURCHASE","rp-note":"USD · Instant download / email delivery","report-buy-btn":"Buy Now →",
-    "rp-includes":"<span>✉️ Delivered to your email instantly</span><span>📄 PDF format (Korean / English)</span><span>🔒 100% refund guarantee within 3 days</span><span>📊 Based on 2026 latest data</span>",
+    "rp-label":"ONE-TIME PURCHASE","rp-btn":"💳 Buy Now with Card →","rp-refund":"⚠️ No refunds after document delivery","rp-note":"USD · Instant download / email delivery","report-buy-btn":"Buy Now →",
+    "rp-includes":"<span>✉️ Delivered to your email instantly</span><span>📄 PDF format (Korean / English)</span><span>⚠️ No refunds after document delivery</span><span>📊 Based on 2026 latest data</span>",
     "rpv1-kw":"Mobile Era & Influencer Emergence","rpv1-desc":"Mobile overtakes PC in ad spend, Naver C-Rank algorithm, first influencer marketing ROI data",
     "rpv2-kw":"COVID & Live Commerce Explosion","rpv2-desc":"Contactless consumer revolution, live commerce ₩40B → ₩6T, short-form era data",
     "rpv3-kw":"AI Marketing & Hyper-Personalization","rpv3-desc":"Generative AI creatives, GEO strategy for zero-click era, 2026 Trend Korea key keywords"
@@ -1616,7 +1621,7 @@ const T = {
     "report-badge":"📊 プレミアムレポート","report-title":"韓国マーケティングトレンドレポート<br>2015 – 2026",
     "report-sub":"11年間の韓国デジタルマーケティング市場の進化を分析した深層レポート。",
     rf1:"年別マーケティングトレンドタイムライン（2015〜2026）",rf2:"韓国検証キャンペーン成功数値",rf3:"オンラインマーケティングチャンネル別ROI期待値",rf4:"2026最新マーケティング手法",rf5:"グローバル代理店との費用構造比較",rf6:"日本・中国・UAE・米国市場別Kマーケティング適用ガイド",
-    "rp-label":"1回購入","rp-note":"USD · 即時ダウンロード / メール送信","report-buy-btn":"今すぐ購入 →",
+    "rp-label":"1回購入","rp-btn":"💳 カードで購入する →","rp-refund":"⚠️ 資料受領後の返金不可","rp-note":"USD · 即時ダウンロード / メール送信","report-buy-btn":"今すぐ購入 →",
     "rp-includes":"<span>✉️ 購入後すぐにメールで送信</span><span>📄 PDF形式（韓国語 / 英語）</span><span>🔒 100%返金保証（3日以内）</span><span>📊 2026年最新データ基準</span>",
     "rpv1-kw":"モバイル元年 & インフルエンサー黎明期","rpv1-desc":"SNS広告がモバイルで逆転、Naver C-Rankアルゴリズム、インフルエンサーマーケティングROI初データ",
     "rpv2-kw":"コロナ & ライブコマース爆発","rpv2-desc":"非対面消費革命、ライブコマース400億→6兆ウォン、ショートフォーム全盛時代の数値分析",
@@ -1700,7 +1705,7 @@ const T = {
     "report-badge":"📊 高级报告","report-title":"韩国营销趋势报告<br>2015 – 2026",
     "report-sub":"深度分析11年韩国数字营销市场演变。实际广告数据、渠道转化率、年度ROI预期值。",
     rf1:"年度营销趋势时间轴（2015-2026）",rf2:"韩国验证广告成功数据 — COSRX全球病毒、爱茉莉太平洋营收+120%",rf3:"在线营销渠道ROI预期值",rf4:"2026最新营销方法论 — AI自动化、零点击优化",rf5:"与全球代理商成本结构比较 — 为什么3%的数据依据",rf6:"日本·中国·阿联酋·美国市场K营销应用指南",
-    "rp-label":"一次性购买","rp-note":"USD · 即时下载 / 邮件发送","report-buy-btn":"立即购买 →",
+    "rp-label":"一次性购买","rp-btn":"💳 立即用信用卡购买 →","rp-refund":"⚠️ 文件送达后不予退款","rp-note":"USD · 即时下载 / 邮件发送","report-buy-btn":"立即购买 →",
     "rp-includes":"<span>✉️ 购买后立即发送至邮箱</span><span>📄 PDF格式（韩语/英语）</span><span>🔒 100%退款保证（3日内）</span><span>📊 基于2026年最新数据</span>",
     "rpv1-kw":"移动元年 & 网红兴起","rpv1-desc":"SNS广告移动端超越PC，Naver C-Rank算法，网红营销ROI首次数据",
     "rpv2-kw":"疫情 & 直播带货爆发","rpv2-desc":"非接触消费革命，直播带货400亿→6万亿韩元，短视频全盛时代数据分析",
