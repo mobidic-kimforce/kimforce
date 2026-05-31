@@ -1076,13 +1076,25 @@ footer p{font-size:.82rem;color:var(--muted);line-height:1.8}
         <div class="report-price-note" id="rp-note">USD · 즉시 다운로드 / 이메일 발송</div>
         
         <div class="crypto-pay" id="crypto-section">
-          <div class="crypto-divider"><span id="crypto-or">또는</span></div>
-          <div class="crypto-header" id="crypto-btn-text">💎 USDT(TRC-20) 결제</div>
-          <div id="usdt-box" style="display:none;margin-top:14px;background:rgba(0,0,0,.3);border:1px solid rgba(251,191,36,.2);border-radius:12px;padding:16px;text-align:left">
-            <div style="font-size:.72rem;color:var(--muted);margin-bottom:6px" id="usdt-label">① USDT(TRC-20) $50 송금 주소:</div>
-            <div style="font-size:.7rem;word-break:break-all;color:var(--gold);font-family:monospace;background:rgba(251,191,36,.08);padding:10px;border-radius:8px;cursor:pointer" onclick="navigator.clipboard.writeText('TDPPUBpTmRWMpgRXbkKwsagji5nLJdN5yd');this.style.opacity='.5';setTimeout(()=>this.style.opacity='1',800)" title="클릭하여 복사">TDPPUBpTmRWMpgRXbkKwsagji5nLJdN5yd</div>
-            <div style="font-size:.7rem;color:var(--muted);margin-top:10px" id="usdt-step2">② 송금 후 <strong>modiking@mobidicauto.com</strong>으로 TX Hash + 이메일 주소 전송</div>
-            <div style="font-size:.68rem;color:var(--muted);margin-top:6px" id="usdt-step3">③ 확인 후 24시간 이내 PDF 발송</div>
+          <div class="usdt-pay-header" id="crypto-btn-text">💎 USDT(TRC-20) 결제</div>
+          <!-- STEP 1: 지갑 주소 -->
+          <div class="usdt-step-block">
+            <div class="usdt-step-label" id="usdt-label">STEP 1 — USDT(TRC-20) $50 송금</div>
+            <div class="usdt-addr-box" onclick="navigator.clipboard.writeText('TDPPUBpTmRWMpgRXbkKwsagji5nLJdN5yd');this.querySelector('.usdt-copy-hint').textContent='✅ 복사됨!';setTimeout(()=>this.querySelector('.usdt-copy-hint').textContent='클릭하여 복사',2000)" title="클릭하여 복사">
+              <span class="usdt-addr">TDPPUBpTmRWMpgRXbkKwsagji5nLJdN5yd</span>
+              <span class="usdt-copy-hint">클릭하여 복사</span>
+            </div>
+          </div>
+          <!-- STEP 2: 결제 요청 폼 -->
+          <div class="usdt-step-block" style="margin-top:14px">
+            <div class="usdt-step-label" id="usdt-step2">STEP 2 — 결제 확인 요청</div>
+            <form id="usdt-request-form" class="usdt-form">
+              <input type="text" id="usdt-name" placeholder="이름" autocomplete="name" required>
+              <input type="email" id="usdt-email" placeholder="이메일" autocomplete="email" required>
+              <input type="text" id="usdt-txhash" placeholder="TX Hash (송금 후 입력)" required>
+              <button type="submit" class="usdt-send-btn" id="usdt-step3">✅ 결제 확인 이메일 발송</button>
+              <div class="usdt-success" id="usdt-success" style="display:none">📬 전송 완료! 24시간 내 PDF 발송됩니다.</div>
+            </form>
           </div>
         </div>
         <div class="report-includes" id="rp-includes">
@@ -1124,15 +1136,12 @@ footer p{font-size:.82rem;color:var(--muted);line-height:1.8}
     <input type="text" id="fi2" name="name" placeholder="담당자" required>
     <input type="email" id="fi3" name="email" placeholder="EMAIL" required>
     <input type="text" id="fi4" name="country" placeholder="국가" required>
-    <select id="fi5" name="marketing_method">
-      <option value="" disabled selected id="fm0">마케팅 방법</option>
-      <option>SNS 마케팅</option>
-      <option>퍼포먼스 마케팅 (CPC/CPA)</option>
-      <option>콘텐츠 마케팅</option>
-      <option>SEO / 바이럴</option>
-      <option>종합 (통합 마케팅)</option>
-    </select>
     <input type="text" id="fi6" name="budget" placeholder="월 광고예산 (각국의 화폐단위로 직접입력)" required>
+    <div class="fi-textarea-wrap">
+      <label class="fi-label" id="fm0-label">희망하는 마케팅 방법</label>
+      <textarea id="fi5" name="marketing_method" placeholder="어떤 마케팅을 원하시는지 자유롭게 적어주세요. (예: SNS 바이럴, 인플루언서 시딩, 퍼포먼스 광고, 글로벌 시장 진출 등)" maxlength="1000" rows="5"></textarea>
+      <div class="fi-char-count"><span id="fi5-count">0</span>/1000</div>
+    </div>
     <input type="hidden" name="_subject" value="🔥 KIMFORCE 새 상담 신청!">
     <button type="submit" class="submit-btn" id="submitbtn">상담 신청하기 →</button>
   </form>
@@ -1247,7 +1256,7 @@ const T = {
     cr3av:"K-First™",cr4av:"월 단위",cr3bv:"일반적 접근",cr4bv:"3~6개월 약정",cr5bv:"단일 언어",
     dashtitle:"실시간 성과 대시보드",
     ctatitle:`<span>무료 상담</span>을 받으세요`,ctasub:"먼저 현재 마케팅에서 무엇이 문제인지 짚어드립니다. 비용 없이.",
-    fi1:"회사명",fi2:"담당자",fi3:"EMAIL",fi4:"국가",fm0:"마케팅 방법",fi6:"월 광고예산 (각국의 화폐단위로 직접입력)",
+    fi1:"회사명",fi2:"담당자",fi3:"EMAIL",fi4:"국가",fm0-label:"희망하는 마케팅 방법",fi6:"월 광고예산 (각국의 화폐단위로 직접입력)",
     submitbtn:"상담 신청하기 →",
     "report-badge":"📊 프리미엄 리포트","report-title":"한국 마케팅 트렌드 리포트<br>2015 – 2026",
     "report-sub":"지난 11년간 한국 디지털 마케팅 시장의 진화를 분석한 심층 리포트. 실제 캠페인 수치, 플랫폼별 전환율, 연도별 ROI 기댓값까지.",
@@ -1302,7 +1311,7 @@ const T = {
     cr3av:"K-First™ Validated",cr4av:"Monthly",cr3bv:"Generic approach",cr4bv:"3-6 month lock-in",cr5bv:"Single language",
     dashtitle:"Live Performance Dashboard",
     ctatitle:`Get Your <span>Free Consultation</span>`,ctasub:"We'll diagnose your marketing blind spots. No cost, no commitment.",
-    fi1:"Company",fi2:"Contact Name",fi3:"Email",fi4:"Country",fm0:"Marketing Method",fi6:"Monthly Ad Budget (in your currency)",
+    fi1:"Company",fi2:"Contact Name",fi3:"Email",fi4:"Country",fm0-label:"Preferred Marketing Method",fi6:"Monthly Ad Budget (in your currency)",
     submitbtn:"Request Consultation →",
     "report-badge":"📊 PREMIUM REPORT","report-title":"Korea Marketing Trend Report<br>2015 – 2026",
     "report-sub":"An in-depth analysis of 11 years of Korean digital marketing evolution. Real campaign numbers, channel-by-channel conversion rates, year-by-year ROI benchmarks.",
@@ -1357,7 +1366,7 @@ const T = {
     cr3av:"K-First™",cr4av:"月単位",cr3bv:"一般的アプローチ",cr4bv:"3〜6ヶ月縛り",cr5bv:"単一言語",
     dashtitle:"リアルタイム成果ダッシュボード",
     ctatitle:`<span>無料相談</span>を受ける`,ctasub:"まず現在のマーケティングの問題点を指摘します。費用なし。",
-    fi1:"会社名",fi2:"担当者",fi3:"メールアドレス",fi4:"国",fm0:"マーケティング手法",fi6:"月間広告予算（各国通貨で入力）",
+    fi1:"会社名",fi2:"担当者",fi3:"メールアドレス",fi4:"国",fm0-label:"希望するマーケティング手法",fi6:"月間広告予算（各国通貨で入力）",
     submitbtn:"相談申し込み →",
     "report-badge":"📊 プレミアムレポート","report-title":"韓国マーケティングトレンドレポート<br>2015 – 2026",
     "report-sub":"11年間の韓国デジタルマーケティング市場の進化を分析した深層レポート。",
@@ -1412,7 +1421,7 @@ const T = {
     cr3av:"K-First™ 验证",cr4av:"按月",cr3bv:"通用方法",cr4bv:"3-6个月锁定",cr5bv:"单一语言",
     dashtitle:"实时效果仪表盘",
     ctatitle:`获取<span>免费咨询</span>`,ctasub:"我们先指出您当前营销的问题所在。零费用。",
-    fi1:"公司名称",fi2:"负责人",fi3:"电子邮件",fi4:"国家",fm0:"营销方式",fi6:"月广告预算（以当地货币填写）",
+    fi1:"公司名称",fi2:"负责人",fi3:"电子邮件",fi4:"国家",fm0-label:"希望的营销方式",fi6:"月广告预算（以当地货币填写）",
     submitbtn:"申请咨询 →",
     "report-badge":"📊 高级报告","report-title":"韩国营销趋势报告<br>2015 – 2026",
     "report-sub":"深度分析11年韩国数字营销市场演变。实际广告数据、渠道转化率、年度ROI预期值。",
@@ -1424,6 +1433,56 @@ const T = {
     "rpv3-kw":"AI营销 & 超个性化","rpv3-desc":"生成式AI创意，零点击时代GEO策略，2026韩国趋势核心关键词"
   }
 };
+
+// textarea 글자 수 카운터
+const fi5el = document.getElementById('fi5');
+const fi5cnt = document.getElementById('fi5-count');
+if(fi5el && fi5cnt){
+  fi5el.addEventListener('input', function(){ fi5cnt.textContent = this.value.length; });
+}
+
+// USDT 결제 요청 폼
+const usdtForm = document.getElementById('usdt-request-form');
+if(usdtForm){
+  usdtForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('usdt-name').value.trim();
+    const email = document.getElementById('usdt-email').value.trim();
+    const txhash = document.getElementById('usdt-txhash').value.trim();
+    if(!name || !email || !txhash) return;
+    const btn = document.getElementById('usdt-step3');
+    btn.disabled = true; btn.textContent = '전송 중...';
+    fetch('https://formspree.io/f/xwvzjnly', {
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify({
+        _subject: '💎 KIMFORCE USDT 결제 확인 요청',
+        name: name,
+        email: email,
+        tx_hash: txhash,
+        amount: 'USDT $50 (TRC-20)',
+        wallet: 'TDPPUBpTmRWMpgRXbkKwsagji5nLJdN5yd',
+        message: 'USDT 결제 확인 요청'
+      })
+    }).then(r => r.json()).then(d => {
+      if(d.ok || d.next){
+        document.getElementById('usdt-success').style.display = 'block';
+        btn.style.display = 'none';
+        usdtForm.querySelectorAll('input').forEach(i => i.disabled = true);
+      } else {
+        btn.textContent = '✅ 결제 확인 이메일 발송';
+        btn.disabled = false;
+      }
+    }).catch(() => {
+      // fallback: mailto
+      const subject = encodeURIComponent('💎 KIMFORCE USDT 결제 확인 요청');
+      const body = encodeURIComponent('이름: '+name+'\n이메일: '+email+'\nTX Hash: '+txhash+'\n금액: USDT $50 (TRC-20)\n지갑: TDPPUBpTmRWMpgRXbkKwsagji5nLJdN5yd');
+      window.location.href = 'mailto:modiking@mobidicauto.com?subject='+subject+'&body='+body;
+      btn.textContent = '✅ 결제 확인 이메일 발송';
+      btn.disabled = false;
+    });
+  });
+}
 
 function setLang(l){
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
