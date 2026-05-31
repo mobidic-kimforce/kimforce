@@ -83,6 +83,11 @@ nav{
 .report-btn:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(251,191,36,.5)}
 .report-includes{margin-top:20px;font-size:.78rem;color:var(--muted);line-height:1.8}
 .report-includes span{display:block}
+.crypto-pay{margin-top:16px}
+.crypto-divider{display:flex;align-items:center;gap:10px;margin-bottom:12px;color:var(--muted);font-size:.75rem}
+.crypto-divider::before,.crypto-divider::after{content:'';flex:1;height:1px;background:var(--border)}
+.crypto-btn{width:100%;background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.3);color:var(--gold);padding:14px;border-radius:12px;font-size:.88rem;font-weight:700;cursor:pointer;font-family:inherit;transition:all .2s;letter-spacing:.3px}
+.crypto-btn:hover{background:rgba(251,191,36,.15);border-color:rgba(251,191,36,.5)}
 .report-preview{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .report-preview-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px}
 .report-preview-year{font-size:.72rem;color:var(--primary);font-weight:800;letter-spacing:2px;margin-bottom:8px}
@@ -1053,6 +1058,16 @@ footer p{font-size:.82rem;color:var(--muted);line-height:1.8}
         <div class="report-price">$50</div>
         <div class="report-price-note" id="rp-note">USD · 즉시 다운로드 / 이메일 발송</div>
         <a href="https://modiking.gumroad.com/l/fesbe" class="report-btn" id="report-buy-btn" target="_blank">지금 구매하기 →</a>
+        <div class="crypto-pay" id="crypto-section">
+          <div class="crypto-divider"><span id="crypto-or">또는</span></div>
+          <button class="crypto-btn" onclick="document.getElementById('usdt-box').style.display=document.getElementById('usdt-box').style.display==='none'?'block':'none'" id="crypto-btn-text">💎 USDT(TRC-20)로 결제</button>
+          <div id="usdt-box" style="display:none;margin-top:14px;background:rgba(0,0,0,.3);border:1px solid rgba(251,191,36,.2);border-radius:12px;padding:16px;text-align:left">
+            <div style="font-size:.72rem;color:var(--muted);margin-bottom:6px" id="usdt-label">① USDT(TRC-20) $50 송금 주소:</div>
+            <div style="font-size:.7rem;word-break:break-all;color:var(--gold);font-family:monospace;background:rgba(251,191,36,.08);padding:10px;border-radius:8px;cursor:pointer" onclick="navigator.clipboard.writeText('TDPPUBpTmRWMpgRXbkKwsagji5nLJdN5yd');this.style.opacity='.5';setTimeout(()=>this.style.opacity='1',800)" title="클릭하여 복사">TDPPUBpTmRWMpgRXbkKwsagji5nLJdN5yd</div>
+            <div style="font-size:.7rem;color:var(--muted);margin-top:10px" id="usdt-step2">② 송금 후 <strong>modiking@mobidicauto.com</strong>으로 TX Hash + 이메일 주소 전송</div>
+            <div style="font-size:.68rem;color:var(--muted);margin-top:6px" id="usdt-step3">③ 확인 후 24시간 이내 PDF 발송</div>
+          </div>
+        </div>
         <div class="report-includes" id="rp-includes">
           <span>✉️ 구매 후 즉시 이메일로 발송</span>
           <span>📄 PDF 형식 (한국어 / 영어)</span>
@@ -1332,23 +1347,4 @@ const T = {
     nav1:"戦略",nav2:"サービス",nav3:"市場",nav4:"相談",nav5:"レポート",
     st1:"広告費に対する手数料",st2:"ヶ月先行して韓国で検証",st3:"ターゲット市場",st4:"対応言語",
     "nv-jp":"2〜3ヶ月後","nv-cn":"3〜6ヶ月後","nv-uae":"新規進出",
-    vtitle:"今まさに韓国で爆発しているマーケティング",vsub:"これらの手法をあなたの市場に先に適用します。広告費の3%で。",
-    vc1h:"ナノインフルエンサー100人同時シーディング",
-    vc1p:"VTコスメティクス RIDDLESHOT — フォロワー1千〜1万人のインフルエンサー100人に同時送付。24時間以内に同時投稿→アルゴリズムがトレンドとして検知。全国売り切れ。",
-    vc1r:"📈 結果: 全国品薄 → 年商170億円",
-    vc2h:"一般人変身ビフォーアフター",
-    vc2p:"芸能人ではなく実際の顧客の変身ストーリー。広告っぽく見えないから抵抗なくシェアされる。クリニック・美容ブランドで爆発的反応。",
-    vc2r:"📈 結果: 広告費比オーガニックリーチ5〜10倍",
-    vc3h:"成分・原料の透明性マーケティング",
-    vc3p:"Anua、Beauty of Joseon —「隠すものがない」ポジショニング。成分公開コンテンツで2030世代の信頼が爆発。現在K-Beautyの標準。",
-    vc3r:"📈 結果: リピート購入率30〜50%達成",
-    vc4h:"チャレンジ オーガニック→有料広告で増幅",
-    vc4p:"チャレンジ形式でオーガニックバイラルをまず確認。反応が良い動画のみ広告費を投入。既に実証済みなのでROAS3〜5倍。",
-    vc4r:"📈 結果: 同予算比ROAS3〜5倍",
-    vc5h:"ポップアップストア + SNSバイラルループ",
-    vc5p:"インスタ映えを誘発する空間設計→来場者が自発投稿→アルゴリズム急上昇→ニュース報道。聖水洞・弘大で証明された公式。",
-    vc5r:"📈 結果: メディア露出+フォロワー10倍成長",
-    vc6h:"コミュニティファースト ローンチ",
-    vc6p:"製品発売前にファンダムをまず構築。ウェイティングリスト→発売当日に口コミ爆発。広告なしで売り切れる公式。",
-    vc6r:"📈 結果: 発売当日完売→待機者5,000人+",
-    stag1:"K-FIRST™ メソッド",stitle1:"韓国が実�
+    vtitle:"今まさに韓国で爆発しているマーケティング",vsub:"これらの手法をあなたの市
