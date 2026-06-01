@@ -131,7 +131,7 @@ const T = {
     "dir-phil":"먼저 신뢰를 얻고, 그 다음 팔아라. 광고는 마지막 수단이다.",
     "sv2-tag4":"네이버 SA",
     ctatitle:`<span>무료 상담</span>을 받으세요`,ctasub:"먼저 현재 마케팅에서 무엇이 문제인지 짚어드립니다. 비용 없이.",
-    fi1:"회사명",fi2:"담당자",fi3:"EMAIL",fi4:"국가",fm0:"마케팅 방법",fi6:"월 광고예산 (각국의 화폐단위로 직접입력)",
+    fi1:"회사명",fi2:"담당자",fi3:"EMAIL",fi4:"국가",fm0:"마케팅 방법",fi6:"월 광고예산 (각국의 화폐단위로 직접입력)",fi7:"자세한 요청사항 (1000자 이내)",
     submitbtn:"상담 신청하기 →",
     "report-badge":"프리미엄 리포트","report-title":"한국 마케팅 트렌드 리포트<br>2015 – 2026",
     "report-sub":"지난 11년간 한국 디지털 마케팅 시장의 진화를 분석한 심층 리포트. 실제 캠페인 수치, 플랫폼별 전환율, 연도별 ROI 기댓값까지.",
@@ -215,7 +215,7 @@ const T = {
     "dir-phil":"\"Earn trust first. Sell second. Advertising is the last resort.\"",
     "sv2-tag4":"Search Ads",
     ctatitle:`Get Your <span>Free Consultation</span>`,ctasub:"We'll diagnose your marketing blind spots. No cost, no commitment.",
-    fi1:"Company",fi2:"Contact Name",fi3:"Email",fi4:"Country",fm0:"Marketing Method",fi6:"Monthly Ad Budget (in your currency)",
+    fi1:"Company",fi2:"Contact Name",fi3:"Email",fi4:"Country",fm0:"Marketing Method",fi6:"Monthly Ad Budget (in your currency)",fi7:"Detailed request (up to 1000 characters)",
     submitbtn:"Request Consultation →",
     "report-badge":"PREMIUM REPORT","report-title":"Korea Marketing Trend Report<br>2015 – 2026",
     "report-sub":"An in-depth analysis of 11 years of Korean digital marketing evolution. Real campaign numbers, channel-by-channel conversion rates, year-by-year ROI benchmarks.",
@@ -299,7 +299,7 @@ const T = {
     "dir-phil":"「まず信頼を得て、次に売る。広告は最後の手段だ。」",
     "sv2-tag4":"検索広告",
     ctatitle:`<span>無料相談</span>を受ける`,ctasub:"まず現在のマーケティングの問題点を指摘します。費用なし。",
-    fi1:"会社名",fi2:"担当者",fi3:"メールアドレス",fi4:"国",fm0:"マーケティング手法",fi6:"月間広告予算（各国通貨で入力）",
+    fi1:"会社名",fi2:"担当者",fi3:"メールアドレス",fi4:"国",fm0:"マーケティング手法",fi6:"月間広告予算（各国通貨で入力）",fi7:"詳細なご要望（1000文字以内）",
     submitbtn:"相談申し込み →",
     "report-badge":"プレミアムレポート","report-title":"韓国マーケティングトレンドレポート<br>2015 – 2026",
     "report-sub":"11年間の韓国デジタルマーケティング市場の進化を分析した深層レポート。",
@@ -383,7 +383,7 @@ const T = {
     "dir-phil":"先获得信任，再销售。广告是最后手段。",
     "sv2-tag4":"搜索广告",
     ctatitle:`获取<span>免费咨询</span>`,ctasub:"我们将免费诊断您当前营销的问题所在。",
-    fi1:"公司名称",fi2:"负责人姓名",fi3:"电子邮件",fi4:"国家",fm0:"营销方式",fi6:"月广告预算（请以当地货币单位填写）",
+    fi1:"公司名称",fi2:"负责人姓名",fi3:"电子邮件",fi4:"国家",fm0:"营销方式",fi6:"月广告预算（请以当地货币单位填写）",fi7:"详细需求说明（1000字以内）",
     submitbtn:"申请咨询 →",
     "report-badge":"高级报告","report-title":"韩国营销趋势报告<br>2015 – 2026",
     "report-sub":"深度分析韩国数字营销市场11年进化的专业报告。真实活动数据、各渠道转化率、逐年ROI期望值。",
@@ -438,3 +438,14 @@ function setLang(l){
 
   document.documentElement.lang=l;
 }
+
+// Character counter for textarea
+document.addEventListener('DOMContentLoaded', function() {
+  var ta = document.getElementById('fi7');
+  var counter = document.getElementById('fi7-count');
+  if (ta && counter) {
+    ta.addEventListener('input', function() {
+      counter.textContent = this.value.length;
+    });
+  }
+});

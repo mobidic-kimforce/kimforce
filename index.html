@@ -564,7 +564,7 @@ nav{
   outline:none;transition:border-color .2s;font-family:inherit;
   backdrop-filter:blur(8px);height:52px
 }
-.contact-form textarea{height:auto;min-height:90px;resize:vertical}
+.contact-form textarea{height:auto;min-height:120px;resize:vertical}
 .contact-form input::placeholder,
 .contact-form textarea::placeholder{color:rgba(255,255,255,.35)}
 .contact-form input:focus,
@@ -737,6 +737,9 @@ h1{font-weight:900;letter-spacing:-0.02em}
 h2{font-weight:800;letter-spacing:-0.02em}
 h3{font-weight:800}
 
+
+.char-counter{text-align:right;font-size:.72rem;color:var(--muted);margin-top:-8px;margin-bottom:8px}
+.char-counter span{color:var(--gold)}
 </style>
 </head>
 <body>
@@ -1432,17 +1435,13 @@ h3{font-weight:800}
         <div class="report-price">$50</div>
         <div class="report-price-note" id="rp-note">USD · 즉시 다운로드 / 이메일 발송</div>
 
-        <!-- Gumroad 결제 버튼 -->
-        <a class="report-btn" href="https://modiking.gumroad.com/l/fesbe" target="_blank" rel="noopener" id="rp-btn">
-          카드 결제로 구매하기 →
-        </a>
-
-        <div class="crypto-pay" id="crypto-section">
-          <div class="crypto-divider"><span id="crypto-or">또는</span></div>
-          <div class="crypto-header" id="crypto-btn-text">USDT(TRC-20) 결제</div>
-          <div id="usdt-box" style="display:none;margin-top:14px;background:rgba(0,0,0,.3);border:1px solid rgba(251,191,36,.2);border-radius:12px;padding:16px;text-align:left">
+        <!-- TRON USDT 결제 전용 -->
+        <div class="crypto-pay" id="crypto-section" style="margin-top:0">
+          <div class="crypto-header" style="font-size:.85rem;font-weight:700;color:var(--gold);margin-bottom:14px" id="crypto-btn-text">USDT(TRC-20) 결제</div>
+          <div id="usdt-box" style="margin-top:0;background:rgba(0,0,0,.3);border:1px solid rgba(251,191,36,.2);border-radius:12px;padding:16px;text-align:left">
             <div style="font-size:.72rem;color:var(--muted);margin-bottom:6px" id="usdt-label">① USDT(TRC-20) $50 송금 주소:</div>
             <div style="font-size:.7rem;word-break:break-all;color:var(--gold);font-family:monospace;background:rgba(251,191,36,.08);padding:10px;border-radius:8px;cursor:pointer" onclick="navigator.clipboard.writeText('TDPPUBpTmRWMpgRXbkKwsagji5nLJdN5yd');this.style.opacity='.5';setTimeout(()=>this.style.opacity='1',800)" title="클릭하여 복사">TDPPUBpTmRWMpgRXbkKwsagji5nLJdN5yd</div>
+            <div style="font-size:.65rem;color:#aaa;margin-top:6px">👆 클릭하면 주소 복사됩니다</div>
             <div style="font-size:.7rem;color:var(--muted);margin-top:10px" id="usdt-step2">② 송금 후 <strong>modiking@mobidicauto.com</strong>으로 TX Hash + 이메일 주소 전송</div>
             <div style="font-size:.68rem;color:var(--muted);margin-top:6px" id="usdt-step3">③ 확인 후 24시간 이내 PDF 발송</div>
           </div>
@@ -1486,6 +1485,7 @@ h3{font-weight:800}
     <input type="text" id="fi2" name="name" placeholder="담당자" required>
     <input type="email" id="fi3" name="email" placeholder="EMAIL" required>
     <input type="text" id="fi4" name="country" placeholder="국가" required>
+    <input type="text" id="fi6" name="budget" placeholder="월 광고예산 (각국의 화폐단위로 직접입력)" required>
     <select id="fi5" name="marketing_method">
       <option value="" disabled selected id="fm0">마케팅 방법</option>
       <option>SNS 마케팅</option>
@@ -1494,7 +1494,8 @@ h3{font-weight:800}
       <option>SEO / 바이럴</option>
       <option>종합 (통합 마케팅)</option>
     </select>
-    <input type="text" id="fi6" name="budget" placeholder="월 광고예산 (각국의 화폐단위로 직접입력)" required>
+    <textarea id="fi7" name="details" maxlength="1000" placeholder="자세한 요청사항 (1000자 이내)"></textarea>
+    <div class="char-counter"><span id="fi7-count">0</span> / 1000</div>
     <input type="hidden" name="_subject" value="KIMFORCE 새 상담 신청!">
     <button type="submit" class="submit-btn" id="submitbtn">상담 신청하기 →</button>
   </form>
