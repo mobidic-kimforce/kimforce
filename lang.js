@@ -443,6 +443,35 @@ function setLang(l){
   if (cnFood) cnFood.style.display = (l === 'zh') ? 'block' : 'none';
 }
 
+
+// ── Plan Selection (cn-food → contact form) ─────────────────────────────
+function selectPlan(planName) {
+  // Fill hidden input
+  const input = document.getElementById('selected-plan');
+  if (input) input.value = planName;
+
+  // Show badge in form
+  const badge = document.getElementById('selected-plan-badge');
+  const text  = document.getElementById('selected-plan-text');
+  if (badge && text) {
+    text.textContent = '선택된 상품: ' + planName;
+    badge.style.display = 'flex';
+  }
+
+  // Highlight the selected plan card
+  document.querySelectorAll('.cnf-plan').forEach(el => el.style.outline = '');
+  const btn = event?.currentTarget;
+  if (btn) btn.closest('.cnf-plan').style.outline = '2px solid var(--gold)';
+}
+
+function clearPlan() {
+  const input = document.getElementById('selected-plan');
+  if (input) input.value = '';
+  const badge = document.getElementById('selected-plan-badge');
+  if (badge) badge.style.display = 'none';
+  document.querySelectorAll('.cnf-plan').forEach(el => el.style.outline = '');
+}
+
 // ── Auto Language Detection ──────────────────────────────────────────────
 // Priority: 1) localStorage (user's manual pick)  2) IP geolocation  3) browser lang
 

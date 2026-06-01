@@ -1090,7 +1090,7 @@ h3{font-weight:800}
           <li>热门话题标签</li>
           <li>修改 1次</li>
         </ul>
-        <a href="#contact" class="cnf-cta-btn" id="cnf-p1-btn">立即咨询 →</a>
+        <a href="#contact" class="cnf-cta-btn" id="cnf-p1-btn" onclick="selectPlan('STARTER 999元')">立即咨询 →</a>
       </div>
       <!-- 베이직 -->
       <div class="cnf-plan popular">
@@ -1106,7 +1106,7 @@ h3{font-weight:800}
           <li>热门话题标签</li>
           <li>修改 1次</li>
         </ul>
-        <a href="#contact" class="cnf-cta-btn" id="cnf-p2-btn">立即咨询 →</a>
+        <a href="#contact" class="cnf-cta-btn" id="cnf-p2-btn" onclick="selectPlan('BASIC 1,299元')">立即咨询 →</a>
       </div>
       <!-- 프로 -->
       <div class="cnf-plan">
@@ -1121,7 +1121,7 @@ h3{font-weight:800}
           <li>店铺优势分析</li>
           <li>修改 2次</li>
         </ul>
-        <a href="#contact" class="cnf-cta-btn" id="cnf-p3-btn">立即咨询 →</a>
+        <a href="#contact" class="cnf-cta-btn" id="cnf-p3-btn" onclick="selectPlan('PRO 2,999元')">立即咨询 →</a>
       </div>
       <!-- 월 운영 -->
       <div class="cnf-plan">
@@ -1136,7 +1136,7 @@ h3{font-weight:800}
           <li>下月改善方案</li>
           <li>专属客服</li>
         </ul>
-        <a href="#contact" class="cnf-cta-btn" id="cnf-p4-btn">立即咨询 →</a>
+        <a href="#contact" class="cnf-cta-btn" id="cnf-p4-btn" onclick="selectPlan('MONTHLY 4,999元起')">立即咨询 →</a>
       </div>
     </div>
 
@@ -1497,6 +1497,12 @@ h3{font-weight:800}
     <textarea id="fi7" name="details" maxlength="1000" placeholder="자세한 요청사항 (1000자 이내)"></textarea>
     <div class="char-counter"><span id="fi7-count">0</span> / 1000</div>
     <input type="hidden" name="_subject" value="KIMFORCE 새 상담 신청!">
+    <input type="hidden" id="selected-plan" name="selected_plan" value="">
+    <div id="selected-plan-badge" style="display:none;margin-bottom:12px;padding:10px 16px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.4);border-radius:10px;font-size:.82rem;color:var(--gold);display:flex;align-items:center;gap:8px">
+      <span>✅</span>
+      <span id="selected-plan-text"></span>
+      <button type="button" onclick="clearPlan()" style="margin-left:auto;background:none;border:none;color:var(--muted);cursor:pointer;font-size:.75rem">✕ 취소</button>
+    </div>
     <button type="submit" class="submit-btn" id="submitbtn">상담 신청하기 →</button>
   </form>
 </section>
@@ -1508,7 +1514,7 @@ h3{font-weight:800}
   <p style="margin-top:6px">© 2026 KIMFORCE · info@kimforce.co.kr</p>
 </footer>
 
-<script src="lang.js?v=20260601d" onerror="console.error('lang.js failed to load')"></script>
+<script src="lang.js?v=20260601e" onerror="console.error('lang.js failed to load')"></script>
 <script>
 // Safety guard: verify critical functions loaded correctly
 document.addEventListener('DOMContentLoaded', function() {
