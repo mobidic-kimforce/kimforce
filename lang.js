@@ -196,7 +196,7 @@ const T = {
     "paradigm-headline":"A New Marketing Paradigm",
     "paradigm-sub":"3 months of validation in Korea. Then Japan · China · Dubai · America — <span class='acc'>global rollout simultaneously.</span>",
     "paradigm-footer":"Global simultaneous rollout · 3% of ad spend · K-First™ Validated",
-    "pm-sub":"Origin of K-Trends","pm-verify":"3-Month<br>Verified",
+    "pm-sub":"Origin of K-Trends","pm-verify":"3-Month<br>Verified","pm-jp":"Twitter/X · LINE","pm-cn":"小红书 · 抖音","pm-uae":"Instagram · TikTok","pm-us":"Meta · TikTok",
     nav2:"Services",nav3:"Markets",nav4:"Contact",
     "dir-tag":"MARKETING DIRECTION","dir-title":"How We Think About Marketing",
     "dir-sub":"We don't burn ad budgets. We build trust first. Then we amplify only what's proven.",
@@ -280,7 +280,7 @@ const T = {
     "paradigm-headline":"新しいマーケティングパラダイム",
     "paradigm-sub":"韓国での<span class='acc'>3ヶ月の検証期間</span>を経て、<br>日本・中国・ドバイ・アメリカ — <span class='acc'>全世界に同時展開</span>します",
     "paradigm-footer":"全世界同時展開 · 広告費の3% · K-First™ 検証済み",
-    "pm-sub":"K-Trendの発信地","pm-verify":"3ヶ月<br>検証完了",
+    "pm-sub":"K-Trendの発信地","pm-verify":"3ヶ月<br>検証完了","pm-jp":"Twitter/X · LINE","pm-cn":"小红书 · 抖音","pm-uae":"Instagram · TikTok","pm-us":"Meta · TikTok",
     nav2:"サービス",nav3:"市場",nav4:"相談",
     "dir-tag":"マーケティング方向性","dir-title":"私たちのマーケティングの考え方",
     "dir-sub":"広告費を燃やすのではなく、まず信頼を築きます。証明されたものだけを増幅します。",
@@ -364,7 +364,7 @@ const T = {
     "paradigm-headline":"全新营销范式",
     "paradigm-sub":"在韩国经过<span class='acc'>3个月验证期</span>后，<br>日本 · 中国 · 迪拜 · 美国 — <span class='acc'>全球同步扩散</span>",
     "paradigm-footer":"全球同步扩散 · 广告费的3% · K-First™ 已验证",
-    "pm-sub":"K-Trend 发源地","pm-verify":"3个月<br>验证完成",
+    "pm-sub":"K-Trend 发源地","pm-verify":"3个月<br>验证完成","pm-jp":"Twitter/X · LINE","pm-cn":"小红书 · 抖音","pm-uae":"Instagram · TikTok","pm-us":"Meta · TikTok",
     nav2:"服务",nav3:"市场",nav4:"咨询",
     "dir-tag":"营销方向性","dir-title":"我们对营销的看法",
     "dir-sub":"不是燃烧广告预算，而是先建立信任。只放大已验证的内容。",
@@ -437,6 +437,10 @@ function setLang(l){
   }
 
   document.documentElement.lang=l;
+
+  // Show cn-food section only for Chinese
+  const cnFood = document.getElementById('cn-food');
+  if (cnFood) cnFood.style.display = (l === 'zh') ? 'block' : 'none';
 }
 
 // Character counter for textarea
