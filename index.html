@@ -632,8 +632,6 @@ footer p{font-size:.82rem;color:var(--muted);line-height:1.8}
   .pm-target{padding:12px 14px;gap:10px}
   .pm-flag{font-size:1.4rem}
 
-  .cnf-intro{grid-template-columns:1fr}
-  .cnf-pricing{grid-template-columns:1fr 1fr}
   .phases,.svc-grid{grid-template-columns:1fr 1fr}
   .viral-grid,.mkt-grid,.cmp-cards,.eff-sc-grid,.dir-grid{grid-template-columns:1fr}
   .om-grid{grid-template-columns:repeat(2,1fr)}
@@ -678,8 +676,6 @@ footer p{font-size:.82rem;color:var(--muted);line-height:1.8}
 
   .phases{grid-template-columns:1fr}
   .svc-grid{grid-template-columns:1fr}
-  .cnf-pricing{grid-template-columns:1fr}
-  .cnf-assets-grid{grid-template-columns:1fr}
   .om-grid{grid-template-columns:1fr}
   .mkt-grid{grid-template-columns:1fr}
   .dir-grid{grid-template-columns:1fr}
@@ -1040,6 +1036,7 @@ h3{font-weight:800}
     </div>
   </div>
 </section>
+
 
 <!-- ════ CN FOOD SHORTFORM ════ -->
 <section class="section cnf-section" id="cn-food">
@@ -1854,4 +1851,176 @@ const T = {
     uae1:"· Instagram·TikTok纳米网红种草",uae2:"· 迪拜购物中心K-beauty快闪店 + 网红联动",uae3:"· 韩国高端美容·医疗高端定位",uae4:"· 阿拉伯语本土化内容 + CRM自动化",
     ustitle:"美国市场",usdesc:"K-beauty最大增长市场。Meta、TikTok、Instagram整合效果营销。韩国验证公式对比本地代理商性价比碾压。",
     us1:"· Meta·TikTok纳米网红种草",us2:"· Amazon·Sephora·Ulta渠道营销",us3:"· TikTok Shop + Instagram Shopping联动",us4:"· 效果广告 — ROAS 4.87x实证",
-    stag4:"WHY KIMFORCE",stitle4:"为什么只要3%？",ssub4:"
+    stag4:"WHY KIMFORCE",stitle4:"为什么只要3%？",ssub4:"AI自动化 + 韩国验证公式彻底革新成本结构。",
+    ch1:"KIMFORCE",ch2:"普通代理商",
+    cr1a:"费率",cr2a:"月1000万投放时",cr3a:"方法论",cr4a:"合同",cr5a:"语言",
+    cr1b:"费率",cr2b:"月1000万投放时",cr3b:"方法论",cr4b:"合同",cr5b:"语言",
+    cr3av:"K-First™ 验证",cr4av:"按月",cr3bv:"通用方法",cr4bv:"3-6个月锁定",cr5bv:"单一语言",
+    dashtitle:"实时效果仪表盘",dashsub:"仅用广告费的3%，实现比传统代理机构高达10倍的成本效率。",
+    "eff-sc-label":"月广告预算1000万韩元场景",
+    "eff-chart-title":"各渠道预估ROAS（已验证内容基准）",
+    "eff-badge2":"普通代理机构","eff-fee1":"手续费","eff-fee2":"手续费",
+    "eff-net1":"净投放","eff-net2":"净投放","eff-pct1":"投放率","eff-pct2":"投放率",
+    effm1:"验证内容ROAS",effm1s:"有机验证后再投广告",
+    effm2:"手续费节省",effm2s:"3% vs 行业平均25%",
+    effm3:"验证前广告费",effm3s:"零失败绩效保证",
+    effm4:"最小合同单位",effm4s:"无风险灵活合同",
+    "paradigm-headline":"全新营销范式",
+    "paradigm-sub":"在韩国经过<span class='acc'>3个月验证期</span>后，<br>日本·中国·迪拜·美国 — <span class='acc'>全球同步扩散</span>",
+    "paradigm-footer":"全球同步扩散 · 广告费3% · K-First™ 已验证",
+    "pm-sub":"K-Trend发源地","pm-verify":"3个月<br>验证完成",
+    nav2:"服务",nav3:"市场",nav4:"咨询",
+    "dir-tag":"营销方向","dir-title":"我们看待营销的方式",
+    "dir-sub":"不是烧钱，而是先建立信任。只放大经过验证的内容。",
+    "dir-s1":"STEP 1","dir-h1":"有机优先",
+    "dir-p1":"所有活动在付费广告前先验证有机反应。通过纳米网红播种、社区口碑、内容A/B测试确认市场真实反应后再投入广告预算。",
+        "dir-r1":"→ 只有经过验证的内容才被放大 — ROAS 3-5倍",
+    "dir-s2":"STEP 2","dir-h2":"跨平台交叉放大",
+    "dir-p2":"不聚焦于单一渠道。将经过验证的内容同时分发到目标市场所有主要平台，利用各平台算法特性最大化有机触达。",
+    "dir-r2":"→ 触达范围比单渠道扩大3-8倍",
+    "dir-s3":"STEP 3","dir-h3":"社区信任构建",
+    "dir-p3":"看起来像广告的内容会被直接划走。真实用户声音、成分透明度、真实前后对比等基于信任的内容才能创造转化率。",
+    "dir-r3":"→ 有机转化率比付费广告高2-4倍",
+    "dir-s4":"STEP 4","dir-h4":"数据驱动每周优化",
+    "dir-p4":"每周追踪效果，立即停止无反应内容。只保留有效内容并放大的精益方式，最小化广告预算浪费。",
+    "dir-r4":"→ 每周优化，广告效率持续提升",
+    "dir-phil":"先赢得信任，再销售。广告是最后的手段。",
+    "sv2-tag4":"搜索广告",
+    ctatitle:`获取<span>免费咨询</span>`,ctasub:"我们先指出您当前营销的问题所在。零费用。",
+    fi1:"公司名称",fi2:"负责人",fi3:"电子邮件",fi4:"国家",fm0:"营销方式",fi6:"月广告预算（以当地货币填写）",
+    submitbtn:"申请咨询 →",
+    "report-badge":"高级报告","report-title":"韩国营销趋势报告<br>2015 – 2026",
+    "report-sub":"深度分析11年韩国数字营销市场演变。实际广告数据、渠道转化率、年度ROI预期值。",
+    rf1:"年度营销趋势时间轴（2015-2026）",rf2:"韩国验证广告成功数据 — COSRX全球病毒、爱茉莉太平洋营收+120%",rf3:"在线营销渠道ROI预期值",rf4:"2026最新营销方法论 — AI自动化、零点击优化",rf5:"与全球代理商成本结构比较 — 为什么3%的数据依据",rf6:"日本·中国·阿联酋·美国市场K营销应用指南",
+    "rp-label":"一次性购买","rp-btn":"立即用信用卡购买 →","rp-refund":"文件送达后不予退款","rp-note":"USD · 即时下载 / 邮件发送","report-buy-btn":"立即购买 →",
+    "rp-includes":"<span>购买后立即发送至邮箱</span><span>PDF格式（韩语/英语）</span><span>100%退款保证（3日内）</span><span>基于2026年最新数据</span>",
+    "rpv1-kw":"移动元年 & 网红兴起","rpv1-desc":"SNS广告移动端超越PC，Naver C-Rank算法，网红营销ROI首次数据",
+    "rpv2-kw":"疫情 & 直播带货爆发","rpv2-desc":"非接触消费革命，直播带货400亿→6万亿韩元，短视频全盛时代数据分析",
+    "rpv3-kw":"AI营销 & 超个性化","rpv3-desc":"生成式AI创意，零点击时代GEO策略，2026韩国趋势核心关键词"
+  }
+};
+
+function toggleMenu(){
+  const m=document.getElementById('mobile-menu');
+  const b=document.getElementById('ham-btn');
+  const open=m.classList.toggle('open');
+  b.textContent=open?'':'';
+  document.body.style.overflow=open?'hidden':'';
+}
+function closeMenu(){
+  const m=document.getElementById('mobile-menu');
+  const b=document.getElementById('ham-btn');
+  if(!m||!b)return;
+  m.classList.remove('open');
+  b.textContent='';
+  document.body.style.overflow='';
+}
+document.addEventListener('click',function(e){
+  const m=document.getElementById('mobile-menu');
+  const b=document.getElementById('ham-btn');
+  if(m&&b&&m.classList.contains('open')&&!m.contains(e.target)&&e.target!==b){closeMenu();}
+});
+
+function setLang(l){
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
+  const btn = document.querySelector('.lang-btn[data-lang="'+l+'"]');
+  if(btn) btn.classList.add('active');
+  const d=T[l];
+  if(!d) return;
+  for(const k in d){
+    const el=document.getElementById(k);
+    if(!el) continue;
+    if(el.tagName==='INPUT'||el.tagName==='TEXTAREA') el.placeholder=d[k];
+    else if(el.tagName==='OPTION') el.textContent=d[k];
+    else el.innerHTML=d[k];
+  }
+  // 중국어 전용 섹션: ZH일 때만 표시
+  const cnfSec = document.getElementById('cn-food');
+  if(cnfSec) cnfSec.style.display = (l==='zh') ? 'block' : 'none';
+
+  const navMap={nav1:'mnav1',nav2:'mnav2',nav3:'mnav3',nav4:'mnav4'};
+  for(const [src,dst] of Object.entries(navMap)){
+    if(d&&d[src]){const el=document.getElementById(dst);if(el)el.innerHTML=d[src];}
+  }
+  document.querySelectorAll('.mobile-lang .lang-btn').forEach(b=>{
+    b.classList.toggle('active', b.getAttribute('data-lang')===l);
+  });
+  const imgs=IMGS[l];
+  if(imgs) for(const id in imgs){
+    const el=document.getElementById(id);
+    if(el&&el.tagName==='IMG') el.src=imgs[id];
+  }
+  document.documentElement.lang=l;
+  try{ localStorage.setItem('kimforce-lang', l); }catch(e){}
+}
+(function(){
+  try{
+    const saved = localStorage.getItem('kimforce-lang');
+    if(saved && saved !== 'ko') setLang(saved);
+  }catch(e){}
+})();
+
+// ── SCROLL REVEAL ──────────────────────────────────────
+(function(){
+  var els = document.querySelectorAll(
+    '.ph-card,.om-card,.svc-card,.dir-card,.mkt-card,.eff-m-card,.cmp-card,.stat-item,.mini-stat,.report-features li'
+  );
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('revealed');io.unobserve(e.target);}
+    });
+  },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){el.classList.add('will-reveal');io.observe(el);});
+})();
+
+// ── HERO MOUSE PARALLAX ───────────────────────────────
+(function(){
+  var heroVisual = document.querySelector('.hero-visual');
+  var hero = document.querySelector('.hero');
+  if(heroVisual && hero){
+    hero.addEventListener('mousemove',function(e){
+      var rect = e.currentTarget.getBoundingClientRect();
+      var x = (e.clientX - rect.left)/rect.width - 0.5;
+      var y = (e.clientY - rect.top)/rect.height - 0.5;
+      heroVisual.style.transform = 'perspective(1000px) rotateY('+(x*6)+'deg) rotateX('+(-y*4)+'deg) translateZ(20px)';
+    });
+    hero.addEventListener('mouseleave',function(){
+      heroVisual.style.transform = 'perspective(1000px) rotateY(0) rotateX(0) translateZ(0)';
+    });
+  }
+})();
+
+// ── SMOOTH SECTION ENTRANCE ───────────────────────────
+(function(){
+  var sectionObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting) e.target.classList.add('section-visible');
+    });
+  },{threshold:0.05});
+  document.querySelectorAll('.section,.paradigm-sec,.report-section,.cta').forEach(function(s){
+    s.classList.add('section-hidden');
+    sectionObs.observe(s);
+  });
+})();
+
+// ── NAV SCROLL STYLE ──────────────────────────────────
+window.addEventListener('scroll',function(){
+  var nav = document.querySelector('nav');
+  if(nav) nav.classList.toggle('scrolled', window.scrollY > 60);
+},{passive:true});
+
+// ── PROGRESS BAR ─────────────────────────────────────
+(function(){
+  var prog = document.createElement('div');
+  prog.id = 'read-progress';
+  prog.style.cssText = 'position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold2));width:0%;z-index:999;transition:width 0.1s';
+  document.body.prepend(prog);
+  window.addEventListener('scroll',function(){
+    var h = document.documentElement;
+    var pct = (window.scrollY/(h.scrollHeight - h.clientHeight))*100;
+    prog.style.width = pct + '%';
+  },{passive:true});
+})();
+</script>
+</body>
+</html>
