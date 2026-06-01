@@ -443,6 +443,62 @@ function setLang(l){
   if (cnFood) cnFood.style.display = (l === 'zh') ? 'block' : 'none';
 }
 
+// ── Auto Language Detection ──────────────────────────────────────────────
+// Priority: 1) localStorage (user's manual pick)  2) IP geolocation  3) browser lang
+
+const COUNTRY_TO_LANG = {
+  KR:'ko',
+  JP:'ja',
+  CN:'zh', TW:'zh', HK:'zh', MO:'zh', SG:'zh',
+};
+
+function countryToLang(cc) {
+  return COUNTRY_TO_LANG[cc] || 'en';
+}
+
+function browserLang() {
+  const nav = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+  if (nav.startsWith('ko')) return 'ko';
+  if (nav.startsWith('ja')) return 'ja';
+  if (nav.startsWith('zh')) return 'zh';
+  return 'en';
+}
+
+function applyAutoLang() {
+  // 1. Respect manual user choice
+  const saved = localStorage.getItem('kimforce_lang');
+  if (saved && ['ko','en','ja','zh'].includes(saved)) {
+    setLang(saved);
+    return;
+  }
+
+  // 2. Fast: browser/OS language as immediate best-guess
+  const fast = browserLang();
+  setLang(fast);
+
+  // 3. Confirm / override with IP-based country (async, silent fallback)
+  fetch('https://ipapi.co/json/', { cache: 'force-cache' })
+    .then(r => r.json())
+    .then(data => {
+      // Only override if user hasn't manually chosen since we started
+      if (localStorage.getItem('kimforce_lang')) return;
+      const ipLang = countryToLang(data.country_code);
+      if (ipLang !== fast) setLang(ipLang);
+    })
+    .catch(() => {
+      // ipapi failed — browser lang already applied, nothing to do
+    });
+}
+
+// Save manual selection when user clicks a lang button
+function setLangManual(l) {
+  localStorage.setItem('kimforce_lang', l);
+  setLang(l);
+}
+
+document.addEventListener('DOMContentLoaded', applyAutoLang);
+
+
 // Character counter for textarea
 document.addEventListener('DOMContentLoaded', function() {
   var ta = document.getElementById('fi7');

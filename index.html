@@ -761,10 +761,10 @@ h3{font-weight:800}
     <li><a href="#report" id="nav5" style="color:var(--gold)">리포트</a></li>
   </ul>
   <div class="lang-btns">
-    <button class="lang-btn active" data-lang="ko" onclick="setLang('ko')">KR</button>
-    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
-    <button class="lang-btn" data-lang="ja" onclick="setLang('ja')">JP</button>
-    <button class="lang-btn" data-lang="zh" onclick="setLang('zh')">ZH</button>
+    <button class="lang-btn active" data-lang="ko" onclick="setLangManual('ko')">KR</button>
+    <button class="lang-btn" data-lang="en" onclick="setLangManual('en')">EN</button>
+    <button class="lang-btn" data-lang="ja" onclick="setLangManual('ja')">JP</button>
+    <button class="lang-btn" data-lang="zh" onclick="setLangManual('zh')">ZH</button>
   </div>
   <button class="ham" id="ham-btn" onclick="toggleMenu()" aria-label="메뉴">☰</button>
 </nav>
@@ -776,10 +776,10 @@ h3{font-weight:800}
   <a href="#markets" onclick="closeMenu()"><span id="mnav3">마켓</span></a>
   <a href="#contact" onclick="closeMenu()"><span id="mnav4">상담</span></a>
   <div class="mobile-lang">
-    <button class="lang-btn" data-lang="ko" onclick="setLang('ko');closeMenu()">KR</button>
-    <button class="lang-btn" data-lang="en" onclick="setLang('en');closeMenu()">EN</button>
-    <button class="lang-btn" data-lang="ja" onclick="setLang('ja');closeMenu()">JP</button>
-    <button class="lang-btn" data-lang="zh" onclick="setLang('zh');closeMenu()">ZH</button>
+    <button class="lang-btn" data-lang="ko" onclick="setLangManual('ko');closeMenu()">KR</button>
+    <button class="lang-btn" data-lang="en" onclick="setLangManual('en');closeMenu()">EN</button>
+    <button class="lang-btn" data-lang="ja" onclick="setLangManual('ja');closeMenu()">JP</button>
+    <button class="lang-btn" data-lang="zh" onclick="setLangManual('zh');closeMenu()">ZH</button>
   </div>
 </div>
 
@@ -1508,7 +1508,7 @@ h3{font-weight:800}
   <p style="margin-top:6px">© 2026 KIMFORCE · info@kimforce.co.kr</p>
 </footer>
 
-<script src="lang.js?v=20260601c" onerror="console.error('lang.js failed to load')"></script>
+<script src="lang.js?v=20260601d" onerror="console.error('lang.js failed to load')"></script>
 <script>
 // Safety guard: verify critical functions loaded correctly
 document.addEventListener('DOMContentLoaded', function() {
