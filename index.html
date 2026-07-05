@@ -1081,7 +1081,7 @@ h3{font-weight:800}
       <!-- 스타터 -->
       <div class="cnf-plan">
         <div class="cnf-plan-name" id="cnf-p1-name">STARTER</div>
-        <div class="cnf-plan-price">999<span>元</span></div>
+        <div class="cnf-plan-price" id="cnf-p1-price">999<span>元</span></div>
         <div class="cnf-plan-sub" id="cnf-p1-sub">短视频 3条 · 体验价</div>
         <ul class="cnf-plan-items" id="cnf-p1-items">
           <li>15~20秒短视频 3条</li>
@@ -1090,13 +1090,13 @@ h3{font-weight:800}
           <li>热门话题标签</li>
           <li>修改 1次</li>
         </ul>
-        <a href="#contact" class="cnf-cta-btn" id="cnf-p1-btn" onclick="selectPlan('STARTER 999元')">立即咨询 →</a>
+        <a href="#contact" class="cnf-cta-btn" id="cnf-p1-btn" onclick="selectPlan('STARTER')">立即咨询 →</a>
       </div>
       <!-- 베이직 -->
       <div class="cnf-plan popular">
         <div class="cnf-plan-badge" id="cnf-popular-badge">인기</div>
         <div class="cnf-plan-name" id="cnf-p2-name">BASIC</div>
-        <div class="cnf-plan-price">1,299<span>元</span></div>
+        <div class="cnf-plan-price" id="cnf-p2-price">1,299<span>元</span></div>
         <div class="cnf-plan-sub" id="cnf-p2-sub">短视频 3条 · 正式价</div>
         <ul class="cnf-plan-items" id="cnf-p2-items">
           <li>20~30秒短视频 3条</li>
@@ -1106,12 +1106,12 @@ h3{font-weight:800}
           <li>热门话题标签</li>
           <li>修改 1次</li>
         </ul>
-        <a href="#contact" class="cnf-cta-btn" id="cnf-p2-btn" onclick="selectPlan('BASIC 1,299元')">立即咨询 →</a>
+        <a href="#contact" class="cnf-cta-btn" id="cnf-p2-btn" onclick="selectPlan('BASIC')">立即咨询 →</a>
       </div>
       <!-- 프로 -->
       <div class="cnf-plan">
         <div class="cnf-plan-name" id="cnf-p3-name">PRO</div>
-        <div class="cnf-plan-price">2,999<span>元</span></div>
+        <div class="cnf-plan-price" id="cnf-p3-price">2,999<span>元</span></div>
         <div class="cnf-plan-sub" id="cnf-p3-sub">短视频 6条 · 全套方案</div>
         <ul class="cnf-plan-items" id="cnf-p3-items">
           <li>短视频 6条</li>
@@ -1121,12 +1121,12 @@ h3{font-weight:800}
           <li>店铺优势分析</li>
           <li>修改 2次</li>
         </ul>
-        <a href="#contact" class="cnf-cta-btn" id="cnf-p3-btn" onclick="selectPlan('PRO 2,999元')">立即咨询 →</a>
+        <a href="#contact" class="cnf-cta-btn" id="cnf-p3-btn" onclick="selectPlan('PRO')">立即咨询 →</a>
       </div>
       <!-- 월 운영 -->
       <div class="cnf-plan">
         <div class="cnf-plan-name" id="cnf-p4-name">MONTHLY</div>
-        <div class="cnf-plan-price">4,999<span>元起</span></div>
+        <div class="cnf-plan-price" id="cnf-p4-price">4,999<span>元起</span></div>
         <div class="cnf-plan-sub" id="cnf-p4-sub">每月 12~20条 · 全托管</div>
         <ul class="cnf-plan-items" id="cnf-p4-items">
           <li>每月 12~20条短视频</li>
@@ -1136,7 +1136,7 @@ h3{font-weight:800}
           <li>下月改善方案</li>
           <li>专属客服</li>
         </ul>
-        <a href="#contact" class="cnf-cta-btn" id="cnf-p4-btn" onclick="selectPlan('MONTHLY 4,999元起')">立即咨询 →</a>
+        <a href="#contact" class="cnf-cta-btn" id="cnf-p4-btn" onclick="selectPlan('MONTHLY')">立即咨询 →</a>
       </div>
     </div>
 
@@ -1144,19 +1144,19 @@ h3{font-weight:800}
       <div class="cnf-assets-title" id="cnf-assets-title">您只需要提供这些素材</div>
       <div class="cnf-assets-grid">
         <div class="cnf-asset-item">
-          <div class="cnf-asset-label">照片 × 20</div>
+          <div class="cnf-asset-label" id="cnf-al1">照片 × 20</div>
           <div class="cnf-asset-value" id="cnf-a1">外观·菜品·内部·用餐区·员工/老板</div>
         </div>
         <div class="cnf-asset-item">
-          <div class="cnf-asset-label">视频 × 5</div>
+          <div class="cnf-asset-label" id="cnf-al2">视频 × 5</div>
           <div class="cnf-asset-value" id="cnf-a2">店内氛围·周边街道·菜品制作·招牌菜</div>
         </div>
         <div class="cnf-asset-item">
-          <div class="cnf-asset-label">基本信息</div>
+          <div class="cnf-asset-label" id="cnf-al3">基本信息</div>
           <div class="cnf-asset-value" id="cnf-a3">店名·地址·营业时间·主打菜品·特色卖点</div>
         </div>
         <div class="cnf-asset-item">
-          <div class="cnf-asset-label">目标平台</div>
+          <div class="cnf-asset-label" id="cnf-al4">目标平台</div>
           <div class="cnf-asset-value" id="cnf-a4">抖音 / 小红书 / TikTok (可选多个)</div>
         </div>
       </div>

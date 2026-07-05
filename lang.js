@@ -396,6 +396,136 @@ const T = {
   }
 };
 
+// ── cn-food (Restaurant Short-Form) translations — shown in ALL languages ──
+const CNF = {
+ ko:{
+  "cnf-tag":"요식업 숏폼 패키지",
+  "cnf-title":"K-스타일 요식업 숏폼 · 전용 패키지",
+  "cnf-sub":"사진 20장과 영상 5개만 주시면, 한국 바이럴 마케팅 스타일로 인스타 릴스·유튜브 쇼츠·TikTok 전용 숏폼을 제작해 드립니다.",
+  "cnf-intro-h":"왜 K-스타일 숏폼인가?",
+  "cnf-intro-p":"한국은 아시아 요식업 콘텐츠 마케팅의 기준입니다. 한국에서 검증된 바이럴 구조—빠른 편집·음식 클로즈업·감성 자막—를 그대로 매장 홍보 콘텐츠에 이식합니다. 단순 편집이 아니라, <strong>동네 손님이 저장하고 공유하고 먹으러 오고 싶게</strong> 만드는 콘텐츠 전략입니다.",
+  "cnf-flow-title":"진행 방식",
+  "cnf-s1":"<strong>사진 20장</strong>(외관·메뉴·내부·분위기) + <strong>영상 5개</strong>(매장 내부·주변·조리 과정)를 보내주세요",
+  "cnf-s2":"KIMFORCE가 한국식 바이럴 구조로 <strong>재편집</strong>하고, 시선을 끄는 도입부·자막·감성 음악을 더합니다",
+  "cnf-s3":"<strong>인스타·유튜브·TikTok</strong> 전용 포맷으로 전달, 게시용 문구 + 인기 해시태그 포함",
+  "cnf-s4":"직접 올리거나, 저희가 대신 게시—<strong>신규 손님 방문율 상승</strong>",
+  "cnf-popular-badge":"인기",
+  "cnf-p1-price":"19<span>만원</span>",  "cnf-p1-sub":"숏폼 3편 · 체험가",
+  "cnf-p1-items":"<li>15~20초 숏폼 3편</li><li>자막 삽입</li><li>게시 문구 3개</li><li>인기 해시태그</li><li>수정 1회</li>",
+  "cnf-p1-btn":"지금 상담하기 →",
+  "cnf-p2-price":"25<span>만원</span>",  "cnf-p2-sub":"숏폼 3편 · 정식가",
+  "cnf-p2-items":"<li>20~30초 숏폼 3편</li><li>자막 삽입</li><li>플랫폼별 게시 문구</li><li>썸네일 문구 3장</li><li>인기 해시태그</li><li>수정 1회</li>",
+  "cnf-p2-btn":"지금 상담하기 →",
+  "cnf-p3-price":"58<span>만원</span>",  "cnf-p3-sub":"숏폼 6편 · 풀패키지",
+  "cnf-p3-items":"<li>숏폼 6편</li><li>플랫폼별 전용 버전</li><li>썸네일 6장</li><li>월간 콘텐츠 캘린더</li><li>매장 강점 분석</li><li>수정 2회</li>",
+  "cnf-p3-btn":"지금 상담하기 →",
+  "cnf-p4-price":"95<span>만원~</span>",  "cnf-p4-sub":"매월 12~20편 · 완전 위탁",
+  "cnf-p4-items":"<li>매월 숏폼 12~20편</li><li>플랫폼 게시 문구</li><li>월간 콘텐츠 캘린더</li><li>인기 영상 분석</li><li>익월 개선안</li><li>전담 매니저</li>",
+  "cnf-p4-btn":"지금 상담하기 →",
+  "cnf-assets-title":"준비물은 이것만 있으면 됩니다",
+  "cnf-al1":"사진 × 20","cnf-al2":"영상 × 5","cnf-al3":"기본 정보","cnf-al4":"목표 플랫폼",
+  "cnf-a1":"외관·메뉴·내부·홀·직원/사장님",
+  "cnf-a2":"매장 분위기·주변 거리·조리 과정·대표 메뉴",
+  "cnf-a3":"상호·주소·영업시간·대표 메뉴·차별점",
+  "cnf-a4":"인스타 / 유튜브 / TikTok (복수 선택 가능)"
+ },
+ en:{
+  "cnf-tag":"Restaurant Short-Form Package",
+  "cnf-title":"K-Style Restaurant Short-Form · Exclusive Package",
+  "cnf-sub":"Just send 20 photos and 5 clips — we produce Instagram Reels · YouTube Shorts · TikTok short-form videos in Korea's viral marketing style.",
+  "cnf-intro-h":"Why K-Style Short-Form?",
+  "cnf-intro-p":"Korea sets the standard for restaurant content marketing in Asia. We transplant Korea's proven viral structure — fast cuts, food close-ups, emotional captions — directly into your restaurant's promo content. Not just editing, but a strategy that makes <strong>local diners want to save, share, and come eat</strong>.",
+  "cnf-flow-title":"HOW IT WORKS",
+  "cnf-s1":"You send <strong>20 photos</strong> (exterior · dishes · interior · vibe) + <strong>5 clips</strong> (inside · surroundings · cooking)",
+  "cnf-s2":"KIMFORCE <strong>re-edits</strong> with Korea's viral structure, adding scroll-stopping hooks, subtitles, and emotional music",
+  "cnf-s3":"Delivered in <strong>Instagram · YouTube · TikTok</strong> formats, with ready-to-post captions + trending hashtags",
+  "cnf-s4":"Upload yourself, or we post for you — <strong>more new customers walking in</strong>",
+  "cnf-popular-badge":"POPULAR",
+  "cnf-p1-price":"$140",  "cnf-p1-sub":"3 videos · Trial price",
+  "cnf-p1-items":"<li>3 videos, 15–20 sec</li><li>Subtitles</li><li>3 post captions</li><li>Trending hashtags</li><li>1 revision</li>",
+  "cnf-p1-btn":"Get Started →",
+  "cnf-p2-price":"$180",  "cnf-p2-sub":"3 videos · Standard price",
+  "cnf-p2-items":"<li>3 videos, 20–30 sec</li><li>Subtitles</li><li>Per-platform captions</li><li>3 cover-image texts</li><li>Trending hashtags</li><li>1 revision</li>",
+  "cnf-p2-btn":"Get Started →",
+  "cnf-p3-price":"$420",  "cnf-p3-sub":"6 videos · Full package",
+  "cnf-p3-items":"<li>6 videos</li><li>Platform-specific versions</li><li>6 cover images</li><li>Monthly content calendar</li><li>Store strength analysis</li><li>2 revisions</li>",
+  "cnf-p3-btn":"Get Started →",
+  "cnf-p4-price":"$700<span>+</span>",  "cnf-p4-sub":"12–20/month · Fully managed",
+  "cnf-p4-items":"<li>12–20 videos/month</li><li>Publishing captions</li><li>Monthly content calendar</li><li>Top-video analytics</li><li>Next-month improvement plan</li><li>Dedicated manager</li>",
+  "cnf-p4-btn":"Get Started →",
+  "cnf-assets-title":"All you need to provide",
+  "cnf-al1":"Photos × 20","cnf-al2":"Videos × 5","cnf-al3":"Basic info","cnf-al4":"Target platforms",
+  "cnf-a1":"Exterior · dishes · interior · dining area · staff/owner",
+  "cnf-a2":"Ambience · nearby streets · cooking · signature dish",
+  "cnf-a3":"Name · address · hours · main dishes · selling points",
+  "cnf-a4":"Instagram / YouTube / TikTok (multiple OK)"
+ },
+ ja:{
+  "cnf-tag":"飲食店ショート動画パッケージ",
+  "cnf-title":"K-スタイル飲食店ショート動画 · 専用パッケージ",
+  "cnf-sub":"写真20枚と動画5本を送るだけ。韓国のバズるマーケティング手法で、Instagramリール・YouTubeショート・TikTok専用のショート動画を制作します。",
+  "cnf-intro-h":"なぜK-スタイルショート動画なのか？",
+  "cnf-intro-p":"韓国はアジアの飲食コンテンツマーケティングの指標です。韓国で実証されたバズる構成—テンポの良い編集・料理のクローズアップ・感情を動かす字幕—をそのままお店の宣伝コンテンツに移植します。単なる編集ではなく、<strong>地元のお客様が保存し、シェアし、食べに来たくなる</strong>コンテンツ戦略です。",
+  "cnf-flow-title":"進め方",
+  "cnf-s1":"<strong>写真20枚</strong>（外観・料理・内装・雰囲気）+ <strong>動画5本</strong>（店内・周辺・調理シーン）を送ってください",
+  "cnf-s2":"KIMFORCEが韓国式バズる構成で<strong>再編集</strong>し、目を引く冒頭・字幕・感情を動かす音楽を加えます",
+  "cnf-s3":"<strong>Instagram・YouTube・TikTok</strong>専用フォーマットで納品、投稿用テキスト+人気ハッシュタグ付き",
+  "cnf-s4":"ご自身で投稿、または当社が代行—<strong>新規客の来店率アップ</strong>",
+  "cnf-popular-badge":"人気",
+  "cnf-p1-price":"21,000<span>円</span>",  "cnf-p1-sub":"ショート動画3本 · お試し価格",
+  "cnf-p1-items":"<li>15〜20秒ショート動画3本</li><li>字幕</li><li>投稿文3本</li><li>人気ハッシュタグ</li><li>修正1回</li>",
+  "cnf-p1-btn":"今すぐ相談 →",
+  "cnf-p2-price":"27,000<span>円</span>",  "cnf-p2-sub":"ショート動画3本 · 通常価格",
+  "cnf-p2-items":"<li>20〜30秒ショート動画3本</li><li>字幕</li><li>プラットフォーム別投稿文</li><li>サムネ文言3枚</li><li>人気ハッシュタグ</li><li>修正1回</li>",
+  "cnf-p2-btn":"今すぐ相談 →",
+  "cnf-p3-price":"63,000<span>円</span>",  "cnf-p3-sub":"ショート動画6本 · フルパッケージ",
+  "cnf-p3-items":"<li>ショート動画6本</li><li>プラットフォーム別バージョン</li><li>サムネ6枚</li><li>月間コンテンツカレンダー</li><li>店舗の強み分析</li><li>修正2回</li>",
+  "cnf-p3-btn":"今すぐ相談 →",
+  "cnf-p4-price":"105,000<span>円〜</span>",  "cnf-p4-sub":"毎月12〜20本 · フルマネージド",
+  "cnf-p4-items":"<li>毎月ショート動画12〜20本</li><li>投稿用テキスト</li><li>月間コンテンツカレンダー</li><li>人気動画分析</li><li>翌月改善案</li><li>専任担当</li>",
+  "cnf-p4-btn":"今すぐ相談 →",
+  "cnf-assets-title":"ご用意いただくのはこれだけ",
+  "cnf-al1":"写真 × 20","cnf-al2":"動画 × 5","cnf-al3":"基本情報","cnf-al4":"対象プラットフォーム",
+  "cnf-a1":"外観・料理・内装・客席・スタッフ/オーナー",
+  "cnf-a2":"店内の雰囲気・周辺の通り・調理シーン・看板メニュー",
+  "cnf-a3":"店名・住所・営業時間・主力メニュー・強み",
+  "cnf-a4":"Instagram / YouTube / TikTok (複数選択可)"
+ },
+ zh:{
+  "cnf-tag":"餐饮短视频套餐",
+  "cnf-title":"韩式餐饮短视频 · 专属套餐",
+  "cnf-sub":"只需提供20张照片和5段视频，我们用韩国爆款营销风格为您制作抖音/小红书/TikTok专属短视频。",
+  "cnf-intro-h":"为什么选择韩式短视频？",
+  "cnf-intro-p":"韩国是亚洲餐饮内容营销的风向标。我们将在韩国验证过的爆款结构——快节奏剪辑、食材特写、情绪化字幕——完整移植到您的餐厅宣传内容中。不只是编辑，而是<strong>让本地食客想保存、想分享、想来吃</strong>的内容策略。",
+  "cnf-flow-title":"HOW IT WORKS",
+  "cnf-s1":"您发送 <strong>20张照片</strong>（外观·菜品·内部·氛围）+ <strong>5段视频</strong>（店内·周边·菜品制作）",
+  "cnf-s2":"KIMFORCE 用韩式爆款结构 <strong>重新剪辑</strong>，加入吸引眼球的开头、中文字幕、情绪化音乐",
+  "cnf-s3":"交付 <strong>抖音·小红书·TikTok</strong> 专属格式，附带发布文案 + 热门话题标签",
+  "cnf-s4":"自己上传，或由我们代为发布——<strong>新客到访率提升</strong>",
+  "cnf-popular-badge":"热门",
+  "cnf-p1-price":"999<span>元</span>",  "cnf-p1-sub":"短视频 3条 · 体验价",
+  "cnf-p1-items":"<li>15~20秒短视频 3条</li><li>中文字幕</li><li>发布文案 3条</li><li>热门话题标签</li><li>修改 1次</li>",
+  "cnf-p1-btn":"立即咨询 →",
+  "cnf-p2-price":"1,299<span>元</span>",  "cnf-p2-sub":"短视频 3条 · 正式价",
+  "cnf-p2-items":"<li>20~30秒短视频 3条</li><li>中文字幕</li><li>抖音/小红书各版文案</li><li>封面图文字 3张</li><li>热门话题标签</li><li>修改 1次</li>",
+  "cnf-p2-btn":"立即咨询 →",
+  "cnf-p3-price":"2,999<span>元</span>",  "cnf-p3-sub":"短视频 6条 · 全套方案",
+  "cnf-p3-items":"<li>短视频 6条</li><li>平台专属版本</li><li>封面图 6张</li><li>月内容日历</li><li>店铺优势分析</li><li>修改 2次</li>",
+  "cnf-p3-btn":"立即咨询 →",
+  "cnf-p4-price":"4,999<span>元起</span>",  "cnf-p4-sub":"每月 12~20条 · 全托管",
+  "cnf-p4-items":"<li>每月 12~20条短视频</li><li>抖音/小红书发布文案</li><li>月度内容日历</li><li>热门视频分析</li><li>下月改善方案</li><li>专属客服</li>",
+  "cnf-p4-btn":"立即咨询 →",
+  "cnf-assets-title":"您只需要提供这些素材",
+  "cnf-al1":"照片 × 20","cnf-al2":"视频 × 5","cnf-al3":"基本信息","cnf-al4":"目标平台",
+  "cnf-a1":"外观·菜品·内部·用餐区·员工/老板",
+  "cnf-a2":"店内氛围·周边街道·菜品制作·招牌菜",
+  "cnf-a3":"店名·地址·营业时间·主打菜品·特色卖点",
+  "cnf-a4":"抖音 / 小红书 / TikTok (可选多个)"
+ }
+};
+for (const __l in CNF){ if(T[__l]) Object.assign(T[__l], CNF[__l]); }
+
+
 function toggleMenu(){
   const m=document.getElementById('mobile-menu');
   const b=document.getElementById('ham-btn');
@@ -440,7 +570,7 @@ function setLang(l){
 
   // Show cn-food section only for Chinese
   const cnFood = document.getElementById('cn-food');
-  if (cnFood) cnFood.style.display = (l === 'zh') ? 'block' : 'none';
+  if (cnFood) cnFood.style.display = 'block';
 }
 
 
@@ -454,7 +584,7 @@ function selectPlan(planName) {
   const badge = document.getElementById('selected-plan-badge');
   const text  = document.getElementById('selected-plan-text');
   if (badge && text) {
-    text.textContent = '선택된 상품: ' + planName;
+    var __pfx={ko:'선택된 상품: ',en:'Selected: ',ja:'選択中: ',zh:'已选套餐: '};var __cl=document.documentElement.lang||'ko';text.textContent=(__pfx[__cl]||__pfx.ko)+planName;
     badge.style.display = 'flex';
   }
 
