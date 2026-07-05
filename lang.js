@@ -525,6 +525,36 @@ const CNF = {
 };
 for (const __l in CNF){ if(T[__l]) Object.assign(T[__l], CNF[__l]); }
 
+// ── report buy-box: PayPal + PDF 열람 라벨 (override/add) ──
+const REPX = {
+ ko:{
+  "rp-note":"USD · 결제 즉시 PDF 열람",
+  "rp-includes":"<span>결제 즉시 PDF 열람</span><span>PDF 형식 (한국어·영어)</span><span>문서 수령 후 환불 불가</span><span>2026년 최신 데이터 기준</span>",
+  "rp-thanks":"결제 완료! 아래에서 리포트를 확인하세요.",
+  "rp-open-btn":"📄 리포트 PDF 열기 →"
+ },
+ en:{
+  "rp-note":"USD · Instant PDF access after payment",
+  "rp-includes":"<span>Instant PDF access</span><span>PDF format (Korean·English)</span><span>No refunds after access</span><span>Based on 2026 latest data</span>",
+  "rp-thanks":"Payment complete! Access your report below.",
+  "rp-open-btn":"📄 Open Report PDF →"
+ },
+ ja:{
+  "rp-note":"USD · 決済後すぐにPDF閲覧",
+  "rp-includes":"<span>決済後すぐPDF閲覧</span><span>PDF形式（韓国語・英語）</span><span>閲覧後の返金不可</span><span>2026年最新データ基準</span>",
+  "rp-thanks":"決済完了！下記からレポートをご覧ください。",
+  "rp-open-btn":"📄 レポートPDFを開く →"
+ },
+ zh:{
+  "rp-note":"USD · 付款后立即查看PDF",
+  "rp-includes":"<span>付款后立即查看PDF</span><span>PDF格式（中文·英文）</span><span>查看后不退款</span><span>基于2026年最新数据</span>",
+  "rp-thanks":"付款完成！请在下方查看报告。",
+  "rp-open-btn":"📄 打开报告PDF →"
+ }
+};
+for (const __l in REPX){ if(T[__l]) Object.assign(T[__l], REPX[__l]); }
+
+
 
 function toggleMenu(){
   const m=document.getElementById('mobile-menu');
