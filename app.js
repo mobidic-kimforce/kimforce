@@ -85,10 +85,11 @@
   };
   function lang(){ var l=(document.documentElement.lang||'en'); return L[l]?l:'en'; }
 
+  var analyzerRoot = null;
   function mountAnalyzer(){
     var root = document.getElementById('meta-analyzer-root');
     if(!root || !window.React || !window.ReactDOM) return;
-    var h = React.createElement, useState = React.useState;
+    var h = React.createElement, useState = React.useState, useEffect = React.useEffect;
     function Field(p){
       return h('label',{className:'ma-field'},
         h('span',{className:'ma-flabel'},p.label),
@@ -98,6 +99,12 @@
     function Stat(p){ return h('div',{className:'ma-stat'+(p.accent?' ma-stat-accent':'')},
       h('div',{className:'ma-stat-val'},p.val), h('div',{className:'ma-stat-key'},p.k)); }
     function App(){
+      var lv = useState(0);
+      useEffect(function(){
+        function on(){ lv[1](function(x){return x+1;}); }
+        window.addEventListener('kf-lang', on);
+        return function(){ window.removeEventListener('kf-lang', on); };
+      },[]);
       var s = useState('3000'), spend=s[0], setSpend=s[1];
       var r = useState('9000'), rev=r[0], setRev=r[1];
       var c = useState('1200'), clicks=c[0], setClicks=c[1];
@@ -129,11 +136,12 @@
         h('a',{href:'#contact',className:'ma-cta',
           onClick:function(){ if(window.selectPlan) window.selectPlan('Meta Ads Audit'); }},t.cta));
     }
-    ReactDOM.createRoot(root).render(h(App));
+    if(!analyzerRoot) analyzerRoot = ReactDOM.createRoot(root);
+    analyzerRoot.render(h(App));
   }
 
   function boot(){ initReveal(); initCountUp(); initTilt(); initNav(); mountAnalyzer(); }
   if(document.readyState!=='loading') boot(); else document.addEventListener('DOMContentLoaded', boot);
   // re-mount analyzer labels on language change
-  window.KF_onLangChange = function(){ mountAnalyzer(); };
+  window.KF_onLangChange = function(){ if(!analyzerRoot) mountAnalyzer(); window.dispatchEvent(new Event('kf-lang')); };
 })();
