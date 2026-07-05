@@ -554,6 +554,64 @@ const REPX = {
 };
 for (const __l in REPX){ if(T[__l]) Object.assign(T[__l], REPX[__l]); }
 
+// ── Global Growth Services (판매 상품) translations ──
+const GS = {
+ ko:{
+  "gs-tag":"글로벌 성장 서비스",
+  "gs-title":"지금 바로 시작하는 글로벌 성장 서비스",
+  "gs-sub":"미국·해외 시장을 겨냥한 패키지. 하나 고르면 이번 주에 시작합니다.",
+  "gs-c1-tag":"성과 진단","gs-c1-title":"메타광고 성과분석 & 방향성","gs-c1-price":"$299","gs-c1-sub":"1회 진단 + 30일 실행안",
+  "gs-c1-items":"<li>계정 전체 · ROAS/CPA/CTR 분석</li><li>오디언스·소재 진단</li><li>30일 실행 로드맵</li><li>지속 운영: 광고비의 3%</li>","gs-c1-btn":"상담하기 →",
+  "gs-c2-tag":"유튜브 성장","gs-c2-title":"유튜브 성장 패키지","gs-c2-price":"$590<span>/월</span>","gs-c2-sub":"월 구독 · 미국 타겟",
+  "gs-c2-items":"<li>채널·콘텐츠 전략</li><li>숏폼 제작 + 편집</li><li>유튜브 SEO·썸네일</li><li>월간 분석 + 다음 액션</li>","gs-c2-btn":"상담하기 →",
+  "gs-c3-tag":"인스타 성장","gs-c3-title":"인스타그램 성장 패키지","gs-c3-price":"$490<span>/월</span>","gs-c3-sub":"월 구독 · 오가닉 우선",
+  "gs-c3-items":"<li>릴스·스토리 콘텐츠 기획</li><li>나노 인플루언서 시딩</li><li>해시태그·캡션 전략</li><li>팔로워·도달 리포트</li>","gs-c3-btn":"상담하기 →",
+  "gs-c4-tag":"애널리틱스 셋업","gs-c4-title":"GA4 · 추적 셋업","gs-c4-price":"$250","gs-c4-sub":"1회 설치",
+  "gs-c4-items":"<li>GA4 + GTM 설치</li><li>전환·UTM 추적</li><li>메타/구글 픽셀 설정</li><li>Looker Studio 대시보드</li>","gs-c4-btn":"상담하기 →"
+ },
+ en:{
+  "gs-tag":"GLOBAL GROWTH SERVICES",
+  "gs-title":"Services You Can Start Today",
+  "gs-sub":"US & global-ready packages. Pick one — we start this week.",
+  "gs-c1-tag":"PERFORMANCE AUDIT","gs-c1-title":"Meta Ads Audit & Direction","gs-c1-price":"$299","gs-c1-sub":"One-time audit + 30-day plan",
+  "gs-c1-items":"<li>Full account · ROAS/CPA/CTR breakdown</li><li>Audience & creative diagnosis</li><li>30-day action roadmap</li><li>Ongoing management: 3% of ad spend</li>","gs-c1-btn":"Get Started →",
+  "gs-c2-tag":"YOUTUBE GROWTH","gs-c2-title":"YouTube Growth Package","gs-c2-price":"$590<span>/mo</span>","gs-c2-sub":"Monthly · US-targeted",
+  "gs-c2-items":"<li>Channel & content strategy</li><li>Shorts production + editing</li><li>YouTube SEO & thumbnails</li><li>Monthly analytics & next steps</li>","gs-c2-btn":"Get Started →",
+  "gs-c3-tag":"INSTAGRAM GROWTH","gs-c3-title":"Instagram Growth Package","gs-c3-price":"$490<span>/mo</span>","gs-c3-sub":"Monthly · Organic-first",
+  "gs-c3-items":"<li>Reels & Stories content plan</li><li>Nano-influencer seeding</li><li>Hashtag & caption strategy</li><li>Follower & reach reporting</li>","gs-c3-btn":"Get Started →",
+  "gs-c4-tag":"ANALYTICS SETUP","gs-c4-title":"GA4 & Tracking Setup","gs-c4-price":"$250","gs-c4-sub":"One-time setup",
+  "gs-c4-items":"<li>GA4 + GTM install</li><li>Conversion & UTM tracking</li><li>Meta/Google pixel setup</li><li>Looker Studio dashboard</li>","gs-c4-btn":"Get Started →"
+ },
+ ja:{
+  "gs-tag":"グローバル成長サービス",
+  "gs-title":"今すぐ始められるグローバル成長サービス",
+  "gs-sub":"米国・海外市場向けパッケージ。選べば今週から開始します。",
+  "gs-c1-tag":"パフォーマンス監査","gs-c1-title":"Meta広告 成果分析&方向性","gs-c1-price":"$299","gs-c1-sub":"1回監査 + 30日プラン",
+  "gs-c1-items":"<li>アカウント全体・ROAS/CPA/CTR分析</li><li>オーディエンス・素材診断</li><li>30日アクションロードマップ</li><li>継続運用：広告費の3%</li>","gs-c1-btn":"相談する →",
+  "gs-c2-tag":"YouTube成長","gs-c2-title":"YouTube成長パッケージ","gs-c2-price":"$590<span>/月</span>","gs-c2-sub":"月額・米国ターゲット",
+  "gs-c2-items":"<li>チャンネル・コンテンツ戦略</li><li>ショート制作+編集</li><li>YouTube SEO・サムネ</li><li>月次分析+次アクション</li>","gs-c2-btn":"相談する →",
+  "gs-c3-tag":"Instagram成長","gs-c3-title":"Instagram成長パッケージ","gs-c3-price":"$490<span>/月</span>","gs-c3-sub":"月額・オーガニック重視",
+  "gs-c3-items":"<li>リール・ストーリー企画</li><li>ナノインフルエンサー施策</li><li>ハッシュタグ・キャプション戦略</li><li>フォロワー・リーチ分析</li>","gs-c3-btn":"相談する →",
+  "gs-c4-tag":"計測セットアップ","gs-c4-title":"GA4・計測セットアップ","gs-c4-price":"$250","gs-c4-sub":"初期設定1回",
+  "gs-c4-items":"<li>GA4 + GTM 設置</li><li>コンバージョン・UTM計測</li><li>Meta/Google ピクセル設定</li><li>Looker Studioダッシュボード</li>","gs-c4-btn":"相談する →"
+ },
+ zh:{
+  "gs-tag":"全球增长服务",
+  "gs-title":"立即可开始的全球增长服务",
+  "gs-sub":"面向美国·海外市场的套餐。选定后本周即可开始。",
+  "gs-c1-tag":"成效审计","gs-c1-title":"Meta广告成效分析&方向","gs-c1-price":"$299","gs-c1-sub":"一次审计 + 30天方案",
+  "gs-c1-items":"<li>账户整体·ROAS/CPA/CTR分析</li><li>受众·素材诊断</li><li>30天行动路线图</li><li>持续运营：广告费的3%</li>","gs-c1-btn":"立即咨询 →",
+  "gs-c2-tag":"YouTube增长","gs-c2-title":"YouTube增长套餐","gs-c2-price":"$590<span>/月</span>","gs-c2-sub":"月付·美国定向",
+  "gs-c2-items":"<li>频道·内容策略</li><li>短视频制作+剪辑</li><li>YouTube SEO·封面</li><li>月度分析+下一步</li>","gs-c2-btn":"立即咨询 →",
+  "gs-c3-tag":"Instagram增长","gs-c3-title":"Instagram增长套餐","gs-c3-price":"$490<span>/月</span>","gs-c3-sub":"月付·自然优先",
+  "gs-c3-items":"<li>Reels·Stories内容策划</li><li>纳米网红种草</li><li>标签·文案策略</li><li>粉丝·触达报告</li>","gs-c3-btn":"立即咨询 →",
+  "gs-c4-tag":"分析部署","gs-c4-title":"GA4·追踪部署","gs-c4-price":"$250","gs-c4-sub":"一次性部署",
+  "gs-c4-items":"<li>GA4 + GTM 安装</li><li>转化·UTM追踪</li><li>Meta/Google像素设置</li><li>Looker Studio仪表板</li>","gs-c4-btn":"立即咨询 →"
+ }
+};
+for (const __l in GS){ if(T[__l]) Object.assign(T[__l], GS[__l]); }
+
+
 
 
 function toggleMenu(){
@@ -601,6 +659,7 @@ function setLang(l){
   // Show cn-food section only for Chinese
   const cnFood = document.getElementById('cn-food');
   if (cnFood) cnFood.style.display = 'block';
+  if (typeof window.KF_onLangChange==='function') window.KF_onLangChange();
 }
 
 
